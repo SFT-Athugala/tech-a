@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BST Section - Tech Takshila</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .bst-gradient {
+            background: linear-gradient(135deg, #8360c3 0%, #2ebf91 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Header -->
+    <nav class="bst-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                    <i class="fas fa-dna text-purple-600 text-xl"></i>
+                </div>
+                <h1 class="text-xl font-bold">Tech Takshila - BST Section</h1>
+            </div>
+            <div class="flex space-x-3">
+                <button onclick="goHome()" class="bg-white text-purple-600 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    <i class="fas fa-home mr-2"></i>මුල් පිටුව
+                </button>
+                <button onclick="showLogin()" class="bg-white text-purple-600 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Header -->
+    <section class="bst-gradient text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-8">
+                <i class="fas fa-dna text-6xl mb-4"></i>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">BST SECTION</h1>
+            <h2 class="text-2xl mb-6">Bio Science Technology</h2>
+            <p class="text-lg">ජීව විද්‍යා තාක්ෂණය - නවීන ජීව විද්‍යා අධ්‍යාපනය</p>
+        </div>
+    </section>
+
+    <!-- Subject Cards -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">BST විෂය</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Biotechnology -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('biotechnology')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-seedling text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">ජීව තාක්ෂණය</h3>
+                        <p class="text-gray-600">Biotechnology - ජීව ද්‍රව්‍ය හා ක්‍රියාවලි</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">න්‍යාය</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">ප්‍රායෝගික</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microbiology -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('microbiology')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bacteria text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">ක්ෂුද්‍ර ජීව විද්‍යාව</h3>
+                        <p class="text-gray-600">Microbiology - ක්ෂුද්‍ර ජීවීන් හා ඔවුන්ගේ ක්‍රියාකාරිත්වය</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">න්‍යාය</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">ප්‍රායෝගික</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Biochemistry -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('biochemistry')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-atom text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">ජීව රසායන විද්‍යාව</h3>
+                        <p class="text-gray-600">Biochemistry - ජීවීන්ගේ රසායනික ක්‍රියාවලි</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">න්‍යාය</span>
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">ප්‍රායෝගික</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Molecular Biology -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('molecular')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-dna text-red-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">අණුක ජීව විද්‍යාව</h3>
+                        <p class="text-gray-600">Molecular Biology - DNA, RNA හා ප්‍රෝටීන් අධ්‍යයනය</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">න්‍යාය</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">ප්‍රායෝගික</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Environmental Science -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('environmental')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-leaf text-teal-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">පරිසර විද්‍යාව</h3>
+                        <p class="text-gray-600">Environmental Science - පරිසරය හා ජීව විවිධත්වය</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded text-sm">න්‍යාය</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">ප්‍රායෝගික</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Past Papers -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('papers')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-file-alt text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">ප්‍රශ්න පත්‍ර</h3>
+                        <p class="text-gray-600">Past Papers - පසුගිය වර්ෂ ප්‍රශ්න පත්‍ර</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">2023</span>
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subject Content Modal -->
+    <div id="subjectModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-4xl w-full mx-4 max-h-96 overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 id="modalTitle" class="text-2xl font-bold text-gray-800"></h2>
+                <button onclick="closeSubject()" class="text-gray-500 hover:text-gray-700 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="modalContent" class="space-y-6">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">ප්‍රවේශ වන්න</h2>
+                <p class="text-gray-600">ඔබේ ගිණුමට ප්‍රවේශ වන්න</p>
+            </div>
+            
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">පරිශීලක නාමය</label>
+                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">මුරපදය</label>
+                    <input type="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-500">
+                </div>
+                <button type="button" onclick="handleLogin()" class="w-full bst-gradient text-white py-2 rounded-lg font-semibold hover:opacity-90 transition duration-300">
+                    ප්‍රවේශ වන්න
+                </button>
+            </form>
+            
+            <div class="mt-6 text-center">
+                <button onclick="closeLogin()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times mr-2"></i>වසන්න
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Subject content data
+        const subjectContent = {
+            biotechnology: {
+                title: 'ජීව තාක්ෂණය - Biotechnology',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-green-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-green-800">
+                                <i class="fas fa-book mr-2"></i>පාඩම් මාලාව
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-play-circle mr-2 text-green-600"></i>ජීව තාක්ෂණික මූලධර්ම</li>
+                                <li><i class="fas fa-play-circle mr-2 text-green-600"></i>ජාන ඉංජිනේරුව</li>
+                                <li><i class="fas fa-play-circle mr-2 text-green-600"></i>ප්‍රෝටීන් ඉංජිනේරුව</li>
+                                <li><i class="fas fa-play-circle mr-2 text-green-600"></i>ජීව ප්‍රතික්‍රියාකාරක</li>
+                                <li><i class="fas fa-play-circle mr-2 text-green-600"></i>ජීව ඖෂධ නිෂ්පාදනය</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-blue-800">
+                                <i class="fas fa-flask mr-2"></i>ප්‍රායෝගික කටයුතු
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-microscope mr-2 text-blue-600"></i>DNA නිස්සාරණය</li>
+                                <li><i class="fas fa-microscope mr-2 text-blue-600"></i>PCR තාක්ෂණය</li>
+                                <li><i class="fas fa-microscope mr-2 text-blue-600"></i>ජාන ක්ලෝනිං</li>
+                                <li><i class="fas fa-microscope mr-2 text-blue-600"></i>ප්‍රෝටීන් පිරිසිදු කිරීම</li>
+                                <li><i class="fas fa-microscope mr-2 text-blue-600"></i>ජීව ප්‍රතික්‍රියාකාරක සැලසුම්</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            microbiology: {
+                title: 'ක්ෂුද්‍ර ජීව විද්‍යාව - Microbiology',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-blue-800">
+                                <i class="fas fa-book mr-2"></i>පාඩම් මාලාව
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-play-circle mr-2 text-blue-600"></i>බැක්ටීරියා විද්‍යාව</li>
+                                <li><i class="fas fa-play-circle mr-2 text-blue-600"></i>වයිරස් විද්‍යාව</li>
+                                <li><i class="fas fa-play-circle mr-2 text-blue-600"></i>දිලීර විද්‍යාව</li>
+                                <li><i class="fas fa-play-circle mr-2 text-blue-600"></i>ක්ෂුද්‍ර ජීවී පරිණාමය</li>
+                                <li><i class="fas fa-play-circle mr-2 text-blue-600"></i>ක්ෂුද්‍ර ජීවී පරිසර විද්‍යාව</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-green-800">
+                                <i class="fas fa-bacteria mr-2"></i>ප්‍රායෝගික කටයුතු
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-petri-dish mr-2 text-green-600"></i>ක්ෂුද්‍ර ජීවී වර්ධනය</li>
+                                <li><i class="fas fa-petri-dish mr-2 text-green-600"></i>ග්‍රෑම් පැල්ලම්</li>
+                                <li><i class="fas fa-petri-dish mr-2 text-green-600"></i>ප්‍රතිජීවක පරීක්ෂණ</li>
+                                <li><i class="fas fa-petri-dish mr-2 text-green-600"></i>ක්ෂුද්‍ර ජීවී හඳුනාගැනීම</li>
+                                <li><i class="fas fa-petri-dish mr-2 text-green-600"></i>ජීව ආරක්ෂණ ක්‍රම</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            biochemistry: {
+                title: 'ජීව රසායන විද්‍යාව - Biochemistry',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-purple-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-purple-800">
+                                <i class="fas fa-book mr-2"></i>පාඩම් මාලාව
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-play-circle mr-2 text-purple-600"></i>කාබෝහයිඩ්‍රේට් රසායන විද්‍යාව</li>
+                                <li><i class="fas fa-play-circle mr-2 text-purple-600"></i>ප්‍රෝටීන් ව්‍යුහය හා ක්‍රියාකාරිත්වය</li>
+                                <li><i class="fas fa-play-circle mr-2 text-purple-600"></i>ලිපිඩ් රසායන විද්‍යාව</li>
+                                <li><i class="fas fa-play-circle mr-2 text-purple-600"></i>එන්සයිම් කයිනෙටික්ස්</li>
+                                <li><i class="fas fa-play-circle mr-2 text-purple-600"></i>පරිවෘත්තීය මාර්ග</li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-orange-800">
+                                <i class="fas fa-atom mr-2"></i>ප්‍රායෝගික කටයුතු
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-vial mr-2 text-orange-600"></i>ප්‍රෝටීන් ප්‍රමාණ නිර්ණය</li>
+                                <li><i class="fas fa-vial mr-2 text-orange-600"></i>එන්සයිම් ක්‍රියාකාරිත්ව පරීක්ෂණ</li>
+                                <li><i class="fas fa-vial mr-2 text-orange-600"></i>SDS-PAGE</li>
+                                <li><i class="fas fa-vial mr-2 text-orange-600"></i>වර්ණමිතික විශ්ලේෂණ</li>
+                                <li><i class="fas fa-vial mr-2 text-orange-600"></i>ELISA පරීක්ෂණ</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            molecular: {
+                title: 'අණුක ජීව විද්‍යාව - Molecular Biology',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-red-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-red-800">
+                                <i class="fas fa-book mr-2"></i>පාඩම් මාලාව
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-play-circle mr-2 text-red-600"></i>DNA ව්‍යුහය හා ක්‍රියාකාරිත්වය</li>
+                                <li><i class="fas fa-play-circle mr-2 text-red-600"></i>RNA සංශ්ලේෂණය</li>
+                                <li><i class="fas fa-play-circle mr-2 text-red-600"></i>ප්‍රෝටීන් සංශ්ලේෂණය</li>
+                                <li><i class="fas fa-play-circle mr-2 text-red-600"></i>ජාන නියාමනය</li>
+                                <li><i class="fas fa-play-circle mr-2 text-red-600"></i>අණුක ක්ලෝනිං</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-blue-800">
+                                <i class="fas fa-dna mr-2"></i>ප්‍රායෝගික කටයුතු
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-cut mr-2 text-blue-600"></i>DNA කැපීම හා සම්බන්ධ කිරීම</li>
+                                <li><i class="fas fa-cut mr-2 text-blue-600"></i>ජෙල් විද්‍යුත් විච්ඡේදනය</li>
+                                <li><i class="fas fa-cut mr-2 text-blue-600"></i>Northern/Southern blotting</li>
+                                <li><i class="fas fa-cut mr-2 text-blue-600"></i>DNA අනුක්‍රමණය</li>
+                                <li><i class="fas fa-cut mr-2 text-blue-600"></i>CRISPR-Cas9 තාක්ෂණය</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            environmental: {
+                title: 'පරිසර විද්‍යාව - Environmental Science',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-teal-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-teal-800">
+                                <i class="fas fa-book mr-2"></i>පාඩම් මාලාව
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-play-circle mr-2 text-teal-600"></i>පරිසර පද්ධති</li>
+                                <li><i class="fas fa-play-circle mr-2 text-teal-600"></i>ජීව විවිධත්වය</li>
+                                <li><i class="fas fa-play-circle mr-2 text-teal-600"></i>පරිසර දූෂණය</li>
+                                <li><i class="fas fa-play-circle mr-2 text-teal-600"></i>දේශගුණික වෙනස්වීම්</li>
+                                <li><i class="fas fa-play-circle mr-2 text-teal-600"></i>තිරසාර සංවර්ධනය</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-green-800">
+                                <i class="fas fa-leaf mr-2"></i>ප්‍රායෝගික කටයුතු
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-seedling mr-2 text-green-600"></i>ජල ගුණාත්මකභාව පරීක්ෂණ</li>
+                                <li><i class="fas fa-seedling mr-2 text-green-600"></i>පාංශු විශ්ලේෂණය</li>
+                                <li><i class="fas fa-seedling mr-2 text-green-600"></i>වායු දූෂණ මැනීම</li>
+                                <li><i class="fas fa-seedling mr-2 text-green-600"></i>ජීව විවිධත්ව සමීක්ෂණ</li>
+                                <li><i class="fas fa-seedling mr-2 text-green-600"></i>පරිසර ප්‍රතිසාධන ක්‍රම</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            papers: {
+                title: 'ප්‍රශ්න පත්‍ර - Past Papers',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-indigo-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-indigo-800">
+                                <i class="fas fa-calendar mr-2"></i>2023 ප්‍රශ්න පත්‍ර
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-file-pdf mr-2 text-indigo-600"></i>ජීව තාක්ෂණය - 2023</li>
+                                <li><i class="fas fa-file-pdf mr-2 text-indigo-600"></i>ක්ෂුද්‍ර ජීව විද්‍යාව - 2023</li>
+                                <li><i class="fas fa-file-pdf mr-2 text-indigo-600"></i>ජීව රසායන විද්‍යාව - 2023</li>
+                                <li><i class="fas fa-file-pdf mr-2 text-indigo-600"></i>අණුක ජීව විද්‍යාව - 2023</li>
+                                <li><i class="fas fa-file-pdf mr-2 text-indigo-600"></i>පරිසර විද්‍යාව - 2023</li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-orange-800">
+                                <i class="fas fa-calendar mr-2"></i>2022 ප්‍රශ්න පත්‍ර
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-file-pdf mr-2 text-orange-600"></i>ජීව තාක්ෂණය - 2022</li>
+                                <li><i class="fas fa-file-pdf mr-2 text-orange-600"></i>ක්ෂුද්‍ර ජීව විද්‍යාව - 2022</li>
+                                <li><i class="fas fa-file-pdf mr-2 text-orange-600"></i>ජීව රසායන විද්‍යාව - 2022</li>
+                                <li><i class="fas fa-file-pdf mr-2 text-orange-600"></i>අණුක ජීව විද්‍යාව - 2022</li>
+                                <li><i class="fas fa-file-pdf mr-2 text-orange-600"></i>පරිසර විද්‍යාව - 2022</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        // Navigation functions
+        function goHome() {
+            // Navigate back to main homepage
+            window.location.href = 'index.html';
+        }
+
+        // Subject modal functions
+        function openSubject(subjectKey) {
+            const subject = subjectContent[subjectKey];
+            document.getElementById('modalTitle').textContent = subject.title;
+            document.getElementById('modalContent').innerHTML = subject.content;
+            document.getElementById('subjectModal').classList.remove('hidden');
+        }
+
+        function closeSubject() {
+            document.getElementById('subjectModal').classList.add('hidden');
+        }
+
+        // Login functions
+        function showLogin() {
+            document.getElementById('loginModal').classList.remove('hidden');
+        }
+
+        function closeLogin() {
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function handleLogin() {
+            alert('ප්‍රවේශය සාර්ථකයි! (Demo Mode)');
+            closeLogin();
+        }
+
+        // Close modals when clicking outside
+        document.getElementById('subjectModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSubject();
+            }
+        });
+
+        document.getElementById('loginModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLogin();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97289e1d3561b2ff',t:'MTc1NTc2MzQ0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

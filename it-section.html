@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Section - Tech Takshila</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .ict-gradient {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Header -->
+    <nav class="ict-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                    <i class="fas fa-laptop-code text-blue-600 text-xl"></i>
+                </div>
+                <h1 class="text-xl font-bold">Tech Takshila - ICT Section</h1>
+            </div>
+            <div class="flex space-x-3">
+                <button onclick="goHome()" class="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    <i class="fas fa-home mr-2"></i>මුල් පිටුව
+                </button>
+                <button onclick="showLogin()" class="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Header -->
+    <section class="ict-gradient text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-8">
+                <i class="fas fa-laptop-code text-6xl mb-4"></i>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">ICT SECTION</h1>
+            <h2 class="text-2xl mb-6">Information & Communication Technology</h2>
+            <p class="text-lg">තොරතුරු හා සන්නිවේදන තාක්ෂණය - නවීන ICT අධ්‍යාපනය</p>
+        </div>
+    </section>
+
+    <!-- Subject Cards -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">ICT විෂය</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Programming -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('programming')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-code text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">ප්‍රෝග්‍රැමිං</h3>
+                        <p class="text-gray-600">Programming - මෘදුකාංග සංවර්ධනය හා කේත ලිවීම</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Python</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('webdev')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-globe text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">වෙබ් සංවර්ධනය</h3>
+                        <p class="text-gray-600">Web Development - වෙබ් අඩවි හා යෙදුම් නිර්මාණය</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">HTML</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('database')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-database text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">ඩේටාබේස්</h3>
+                        <p class="text-gray-600">Database - දත්ත ගබඩා කිරීම හා කළමනාකරණය</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">SQL</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Networking -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('networking')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-network-wired text-yellow-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">නෙට්වර්කිං</h3>
+                        <p class="text-gray-600">Networking - පරිගණක ජාල හා සන්නිවේදනය</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">TCP/IP</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Router</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cyber Security -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('cybersecurity')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">සයිබර් ආරක්ෂාව</h3>
+                        <p class="text-gray-600">Cyber Security - ඩිජිටල් ආරක්ෂණ හා ගුප්ත කේතනය</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">Encryption</span>
+                            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">Firewall</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Machine Learning -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6 cursor-pointer" onclick="openSubject('aiml')">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-robot text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">AI & ML</h3>
+                        <p class="text-gray-600">Artificial Intelligence - කෘත්‍රිම බුද්ධිය හා යන්ත්‍ර ඉගෙනීම</p>
+                        <div class="mt-4 flex justify-center space-x-2">
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-sm">TensorFlow</span>
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Neural Networks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subject Content Modal -->
+    <div id="subjectModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-4xl w-full mx-4 max-h-96 overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 id="modalTitle" class="text-2xl font-bold text-gray-800"></h2>
+                <button onclick="closeSubject()" class="text-gray-500 hover:text-gray-700 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="modalContent" class="space-y-6">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">ප්‍රවේශ වන්න</h2>
+                <p class="text-gray-600">ඔබේ ගිණුමට ප්‍රවේශ වන්න</p>
+            </div>
+            
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">පරිශීලක නාමය</label>
+                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">මුරපදය</label>
+                    <input type="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <button type="button" onclick="handleLogin()" class="w-full ict-gradient text-white py-2 rounded-lg font-semibold hover:opacity-90 transition duration-300">
+                    ප්‍රවේශ වන්න
+                </button>
+            </form>
+            
+            <div class="mt-6 text-center">
+                <button onclick="closeLogin()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times mr-2"></i>වසන්න
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Subject content data
+        const subjectContent = {
+            programming: {
+                title: 'ප්‍රෝග්‍රැමිං - Programming',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-blue-800">
+                                <i class="fas fa-book mr-2"></i>පාඩම් මාලාව
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-play-circle mr-2 text-blue-600"></i>Python මූලික කරුණු</li>
+                                <li><i class="fas fa-play-circle mr-2 text-blue-600"></i>Java OOP සංකල්ප</li>
+                                <li><i class="fas fa-play-circle mr-2 text-blue-600"></i>C++ ප්‍රෝග්‍රැමිං</li>
+                                <li><i class="fas fa-play-circle mr-2 text-blue-600"></i>JavaScript ES6+</li>
+                                <li><i class="fas fa-play-circle mr-2 text-blue-600"></i>Data Structures & Algorithms</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-green-800">
+                                <i class="fas fa-code mr-2"></i>ප්‍රායෝගික කටයුතු
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-laptop-code mr-2 text-green-600"></i>Console Applications</li>
+                                <li><i class="fas fa-laptop-code mr-2 text-green-600"></i>GUI Development</li>
+                                <li><i class="fas fa-laptop-code mr-2 text-green-600"></i>API Integration</li>
+                                <li><i class="fas fa-laptop-code mr-2 text-green-600"></i>Version Control (Git)</li>
+                                <li><i class="fas fa-laptop-code mr-2 text-green-600"></i>Testing & Debugging</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            webdev: {
+                title: 'වෙබ් සංවර්ධනය - Web Development',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-green-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-green-800">
+                                <i class="fas fa-book mr-2"></i>පාඩම් මාලාව
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-play-circle mr-2 text-green-600"></i>HTML5 & Semantic Web</li>
+                                <li><i class="fas fa-play-circle mr-2 text-green-600"></i>CSS3 & Responsive Design</li>
+                                <li><i class="fas fa-play-circle mr-2 text-green-600"></i>JavaScript & DOM</li>
+                                <li><i class="fas fa-play-circle mr-2 text-green-600"></i>React.js Framework</li>
+                                <li><i class="fas fa-play-circle mr-2 text-green-600"></i>Node.js Backend</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-blue-800">
+                                <i class="fas fa-globe mr-2"></i>ප්‍රායෝගික කටයුතු
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-paint-brush mr-2 text-blue-600"></i>Portfolio Websites</li>
+                                <li><i class="fas fa-paint-brush mr-2 text-blue-600"></i>E-commerce Sites</li>
+                                <li><i class="fas fa-paint-brush mr-2 text-blue-600"></i>Progressive Web Apps</li>
+                                <li><i class="fas fa-paint-brush mr-2 text-blue-600"></i>REST API Development</li>
+                                <li><i class="fas fa-paint-brush mr-2 text-blue-600"></i>Web Hosting & Deployment</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            database: {
+                title: 'ඩේටාබේස් - Database Management',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-purple-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-purple-800">
+                                <i class="fas fa-book mr-2"></i>පාඩම් මාලාව
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-play-circle mr-2 text-purple-600"></i>Database Design Principles</li>
+                                <li><i class="fas fa-play-circle mr-2 text-purple-600"></i>SQL Fundamentals</li>
+                                <li><i class="fas fa-play-circle mr-2 text-purple-600"></i>Normalization & ER Models</li>
+                                <li><i class="fas fa-play-circle mr-2 text-purple-600"></i>MySQL Administration</li>
+                                <li><i class="fas fa-play-circle mr-2 text-purple-600"></i>NoSQL Databases</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-red-800">
+                                <i class="fas fa-database mr-2"></i>ප්‍රායෝගික කටයුතු
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-table mr-2 text-red-600"></i>Database Creation & Management</li>
+                                <li><i class="fas fa-table mr-2 text-red-600"></i>Complex Query Writing</li>
+                                <li><i class="fas fa-table mr-2 text-red-600"></i>Stored Procedures & Functions</li>
+                                <li><i class="fas fa-table mr-2 text-red-600"></i>Database Backup & Recovery</li>
+                                <li><i class="fas fa-table mr-2 text-red-600"></i>Performance Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            networking: {
+                title: 'නෙට්වර්කිං - Computer Networking',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-yellow-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-yellow-800">
+                                <i class="fas fa-book mr-2"></i>පාඩම් මාලාව
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-play-circle mr-2 text-yellow-600"></i>OSI Model & TCP/IP</li>
+                                <li><i class="fas fa-play-circle mr-2 text-yellow-600"></i>IP Addressing & Subnetting</li>
+                                <li><i class="fas fa-play-circle mr-2 text-yellow-600"></i>Routing & Switching</li>
+                                <li><i class="fas fa-play-circle mr-2 text-yellow-600"></i>Wireless Networks</li>
+                                <li><i class="fas fa-play-circle mr-2 text-yellow-600"></i>Network Protocols</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-blue-800">
+                                <i class="fas fa-network-wired mr-2"></i>ප්‍රායෝගික කටයුතු
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-wifi mr-2 text-blue-600"></i>Network Configuration</li>
+                                <li><i class="fas fa-wifi mr-2 text-blue-600"></i>Router & Switch Setup</li>
+                                <li><i class="fas fa-wifi mr-2 text-blue-600"></i>Network Troubleshooting</li>
+                                <li><i class="fas fa-wifi mr-2 text-blue-600"></i>VLAN Configuration</li>
+                                <li><i class="fas fa-wifi mr-2 text-blue-600"></i>Network Monitoring Tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            cybersecurity: {
+                title: 'සයිබර් ආරක්ෂාව - Cyber Security',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-red-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-red-800">
+                                <i class="fas fa-book mr-2"></i>පාඩම් මාලාව
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-play-circle mr-2 text-red-600"></i>Information Security Fundamentals</li>
+                                <li><i class="fas fa-play-circle mr-2 text-red-600"></i>Cryptography & Encryption</li>
+                                <li><i class="fas fa-play-circle mr-2 text-red-600"></i>Network Security</li>
+                                <li><i class="fas fa-play-circle mr-2 text-red-600"></i>Ethical Hacking</li>
+                                <li><i class="fas fa-play-circle mr-2 text-red-600"></i>Digital Forensics</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-gray-800">
+                                <i class="fas fa-shield-alt mr-2"></i>ප්‍රායෝගික කටයුතු
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-lock mr-2 text-gray-600"></i>Penetration Testing</li>
+                                <li><i class="fas fa-lock mr-2 text-gray-600"></i>Vulnerability Assessment</li>
+                                <li><i class="fas fa-lock mr-2 text-gray-600"></i>Firewall Configuration</li>
+                                <li><i class="fas fa-lock mr-2 text-gray-600"></i>Incident Response</li>
+                                <li><i class="fas fa-lock mr-2 text-gray-600"></i>Security Auditing</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            aiml: {
+                title: 'AI & ML - Artificial Intelligence & Machine Learning',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-indigo-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-indigo-800">
+                                <i class="fas fa-book mr-2"></i>පාඩම් මාලාව
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-play-circle mr-2 text-indigo-600"></i>Machine Learning Fundamentals</li>
+                                <li><i class="fas fa-play-circle mr-2 text-indigo-600"></i>Deep Learning & Neural Networks</li>
+                                <li><i class="fas fa-play-circle mr-2 text-indigo-600"></i>Natural Language Processing</li>
+                                <li><i class="fas fa-play-circle mr-2 text-indigo-600"></i>Computer Vision</li>
+                                <li><i class="fas fa-play-circle mr-2 text-indigo-600"></i>AI Ethics & Applications</li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-4 text-orange-800">
+                                <i class="fas fa-robot mr-2"></i>ප්‍රායෝගික කටයුතු
+                            </h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li><i class="fas fa-brain mr-2 text-orange-600"></i>TensorFlow & Keras Projects</li>
+                                <li><i class="fas fa-brain mr-2 text-orange-600"></i>Image Classification Models</li>
+                                <li><i class="fas fa-brain mr-2 text-orange-600"></i>Chatbot Development</li>
+                                <li><i class="fas fa-brain mr-2 text-orange-600"></i>Data Analysis with Python</li>
+                                <li><i class="fas fa-brain mr-2 text-orange-600"></i>AI Model Deployment</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        // Navigation functions
+        function goHome() {
+            // Navigate back to main homepage
+            window.location.href = 'index.html';
+        }
+
+        // Subject modal functions
+        function openSubject(subjectKey) {
+            const subject = subjectContent[subjectKey];
+            document.getElementById('modalTitle').textContent = subject.title;
+            document.getElementById('modalContent').innerHTML = subject.content;
+            document.getElementById('subjectModal').classList.remove('hidden');
+        }
+
+        function closeSubject() {
+            document.getElementById('subjectModal').classList.add('hidden');
+        }
+
+        // Login functions
+        function showLogin() {
+            document.getElementById('loginModal').classList.remove('hidden');
+        }
+
+        function closeLogin() {
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function handleLogin() {
+            alert('ප්‍රවේශය සාර්ථකයි! (Demo Mode)');
+            closeLogin();
+        }
+
+        // Close modals when clicking outside
+        document.getElementById('subjectModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSubject();
+            }
+        });
+
+        document.getElementById('loginModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLogin();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9728b3ed7222ce33',t:'MTc1NTc2NDMzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

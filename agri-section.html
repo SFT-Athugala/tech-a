@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRI SECTION - Tech Takshila</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans Sinhala', sans-serif;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .sft-gradient {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 50%, #1E3A8A 100%);
+        }
+        
+        .download-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .breadcrumb {
+            background: linear-gradient(90deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Header -->
+    <nav class="sft-gradient text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                    <i class="fas fa-atom text-blue-600 text-xl"></i>
+                </div>
+                <h1 class="text-xl font-bold">Tech Takshila - AGRI SECTION</h1>
+            </div>
+            <div class="flex space-x-3">
+                <button onclick="goHome()" class="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    <i class="fas fa-home mr-2"></i>මුල් පිටුව
+                </button>
+                <button onclick="showLogin()" class="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb py-4">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="#" onclick="goHome()" class="text-blue-600 hover:text-blue-800">මුල් පිටුව</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <span id="breadcrumbText" class="text-gray-600">AGRI  විෂය</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="mainContent">
+        <!-- Main SFT Page (Third Version - 6 Cards) -->
+        <section id="mainSFTPage" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-atom text-blue-600 text-3xl"></i>
+                    </div>
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Agronomy</h1>
+                    <p class="text-lg text-gray-600 mb-8">කෘෂි විද්‍යා විෂය නෙත් දේශයට අනුකූලව - සම්පූර්ණ අධ්‍යාපන සම්පත්</p>
+                    
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">163+</div>
+                            <div class="text-gray-600">ප්‍රශ්න පත්‍ර</div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <div class="text-3xl font-bold text-green-600 mb-2">10</div>
+                            <div class="text-gray-600">අවුරුදු</div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">Agronomy</div>
+                            <div class="text-gray-600">විෂය</div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <div class="text-3xl font-bold text-orange-600 mb-2">100%</div>
+                            <div class="text-gray-600">නොමිලේ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subject Cards Grid (6 Cards) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+                    <!-- Mathematics (1st) -->
+                    <div class="card-hover bg-gradient-to-br from-indigo-500 to-indigo-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="selectSubject('mathematics')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-calculator text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">ප්‍රාථමික කෘෂිකර්ම තාක්ෂණය</h3>
+                            <p class="text-indigo-100 mb-4">Primary agricultural technology</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Algebra, Calculus</p>
+                                <p class="text-xs mt-1">Statistics</p>
+                            </div>
+                            <div class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>විශය සඳහා පිවිසෙන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ICT (2nd) -->
+                    <div class="card-hover bg-gradient-to-br from-purple-500 to-purple-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="selectSubject('ict')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-laptop-code text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">ICT</h3>
+                            <p class="text-purple-100 mb-4">Information Technology</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Programming</p>
+                                <p class="text-xs mt-1">Networks</p>
+                            </div>
+                            <div class="bg-white text-purple-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>විශය සඳහා පිවිසෙන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chemistry (3rd) -->
+                    <div class="card-hover bg-gradient-to-br from-green-500 to-green-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="selectSubject('chemistry')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-flask text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">රසායන විද්‍යාව</h3>
+                            <p class="text-green-100 mb-4">Chemistry</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Organic, Inorganic</p>
+                                <p class="text-xs mt-1">Physical Chemistry</p>
+                            </div>
+                            <div class="bg-white text-green-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>විෂය සඳහා පිවිසෙන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Physics (4th) -->
+                    <div class="card-hover bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="selectSubject('physics')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-atom text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">භෞතික විද්‍යාව</h3>
+                            <p class="text-blue-100 mb-4">Physics</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Mechanics, Waves</p>
+                                <p class="text-xs mt-1">Energy</p>
+                            </div>
+                            <div class="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>විෂය සඳහා පිවිසෙන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Biology (5th) -->
+                    <div class="card-hover bg-gradient-to-br from-emerald-500 to-emerald-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="selectSubject('biology')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-dna text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">ජීව විද්‍යාව</h3>
+                            <p class="text-emerald-100 mb-4">Biology</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Cell Biology</p>
+                                <p class="text-xs mt-1">Genetics</p>
+                            </div>
+                            <div class="bg-white text-emerald-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>විෂය සඳහා පිවිසෙන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question Papers (6th - Main Feature) -->
+                    <div class="card-hover bg-gradient-to-br from-orange-500 to-red-600 text-white rounded-xl shadow-lg p-6 cursor-pointer transform scale-105" onclick="goToPapersSection()">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-file-download text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">ප්‍රශ්න පත්‍ර</h3>
+                            <p class="text-orange-100 mb-4">Question Papers</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">2017-2025 Papers</p>
+                                <p class="text-xs mt-1">Download Available</p>
+                            </div>
+                            <div class="bg-white text-orange-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>ප්‍රශ්න පත්‍ර අධ්‍යයනය කරන්න
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">විශේෂාංග</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-download text-green-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">ඉක්මන් බාගත කිරීම</h3>
+                            <p class="text-gray-600">සියලුම ප්‍රශ්න පත්‍ර PDF ආකාරයෙන් ඉක්මනින් බාගත කරන්න</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-search text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">පහසු සෙවීම</h3>
+                            <p class="text-gray-600">අවුරුද්ද, වාරය සහ කාණ්ඩය අනුව පත්‍ර සොයන්න</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-mobile-alt text-purple-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">Mobile Friendly</h3>
+                            <p class="text-gray-600">ඕනෑම උපකරණයකින් පහසුවෙන් භාවිතා කරන්න</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Papers Section (Hidden initially) -->
+        <section id="papersSection" class="py-16 hidden">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <button onclick="goBackToMain()" class="mb-6 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">SFT ප්‍රශ්න පත්‍ර</h2>
+                    <p class="text-lg text-gray-600">කාණ්ඩයක් තෝරන්න</p>
+                </div>
+
+                <!-- Paper Categories -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <!-- Ministry Papers -->
+                    <div class="card-hover bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-xl p-8 cursor-pointer" onclick="openPaperCategory('ministry')">
+                        <div class="text-center">
+                            <i class="fas fa-building text-4xl mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-3">අමාත්‍යාංශ පත්‍ර</h3>
+                            <p class="text-blue-100 mb-4">Ministry Papers</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                                <p class="text-sm">2017-2025</p>
+                                <p class="text-xs mt-1">National Level</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Provincial Papers -->
+                    <div class="card-hover bg-gradient-to-br from-green-500 to-green-700 text-white rounded-xl p-8 cursor-pointer" onclick="openPaperCategory('provincial')">
+                        <div class="text-center">
+                            <i class="fas fa-map-marker-alt text-4xl mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-3">පළාත් පත්‍ර</h3>
+                            <p class="text-green-100 mb-4">Provincial Papers</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                                <p class="text-sm">3 Terms/Year</p>
+                                <p class="text-xs mt-1">2017-2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Regional Papers -->
+                    <div class="card-hover bg-gradient-to-br from-purple-500 to-purple-700 text-white rounded-xl p-8 cursor-pointer" onclick="openPaperCategory('regional')">
+                        <div class="text-center">
+                            <i class="fas fa-globe-asia text-4xl mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-3">කලාප පත්‍ර</h3>
+                            <p class="text-purple-100 mb-4">Regional Papers</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                                <p class="text-sm">3 Terms/Year</p>
+                                <p class="text-xs mt-1">2017-2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biology Section -->
+        <section id="biologySection" class="py-16 hidden">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <button onclick="goBackToMain()" class="mb-6 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <div class="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-dna text-emerald-600 text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">ජීව විද්‍යාව - Biology</h2>
+                    <p class="text-lg text-gray-600">උසස් පෙළ තාක්ෂණවේදයක් සඳහා විද්‍යාව - ජීව විද්‍යාව</p>
+                </div>
+
+                <!-- Biology Resources Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Government Books -->
+                    <div class="card-hover bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openBiologyResource('books')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-book text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">රජයේ පොත්</h3>
+                            <p class="text-blue-100 mb-4">Government Books</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Official Textbooks</p>
+                                <p class="text-xs mt-1">PDF Downloads</p>
+                            </div>
+                            <div class="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>පොත් බලන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Athugala Sir's Notes -->
+                    <div class="card-hover bg-gradient-to-br from-green-500 to-green-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openBiologyResource('notes')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-file-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">ඇතුගල සර්ගේ නිබන්ධන</h3>
+                            <p class="text-green-100 mb-4">Athugala Sir's Notes</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Comprehensive Notes</p>
+                                <p class="text-xs mt-1">Topic-wise</p>
+                            </div>
+                            <div class="bg-white text-green-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>නිබන්ධන බලන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settis Athikala Sir's Videos -->
+                    <div class="card-hover bg-gradient-to-br from-red-500 to-red-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openBiologyResource('videos')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-play-circle text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ</h3>
+                            <p class="text-red-100 mb-4">Settis Athikala Sir's Videos</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Video Lessons</p>
+                                <p class="text-xs mt-1">Chapter-wise</p>
+                            </div>
+                            <div class="bg-white text-red-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>වීඩියෝ බලන්න
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Biology Features -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mt-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">ජීව විද්‍යාව සම්පත්</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-microscope text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">සම්පූර්ණ අධ්‍යාපන ක්‍රම</h4>
+                            <p class="text-gray-600">රජයේ පොත්, ගුරු නිබන්ධන සහ වීඩියෝ පාඩම්</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-leaf text-green-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">ප්‍රායෝගික අධ්‍යයනය</h4>
+                            <p class="text-gray-600">සෛල ජීව විද්‍යාව, ජාන විද්‍යාව සහ පරිසර විද්‍යාව</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-graduation-cap text-red-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">විශේෂඥ මාර්ගෝපදේශනය</h4>
+                            <p class="text-gray-600">පළපුරුදු ගුරුවරුන්ගේ නිබන්ධන සහ වීඩියෝ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Physics Section -->
+        <section id="physicsSection" class="py-16 hidden">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <button onclick="goBackToMain()" class="mb-6 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-atom text-blue-600 text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">භෞතික විද්‍යාව - Physics</h2>
+                    <p class="text-lg text-gray-600">උසස් පෙළ තාක්ෂණවේදයක් සඳහා විද්‍යාව - භෞතික විද්‍යාව</p>
+                </div>
+
+                <!-- Physics Resources Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Government Books -->
+                    <div class="card-hover bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openPhysicsResource('books')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-book text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">රජයේ පොත්</h3>
+                            <p class="text-blue-100 mb-4">Government Books</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Official Textbooks</p>
+                                <p class="text-xs mt-1">PDF Downloads</p>
+                            </div>
+                            <div class="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>පොත් බලන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Athugala Sir's Notes -->
+                    <div class="card-hover bg-gradient-to-br from-green-500 to-green-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openPhysicsResource('notes')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-file-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">ඇතුගල සර්ගේ නිබන්ධන</h3>
+                            <p class="text-green-100 mb-4">Athugala Sir's Notes</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Comprehensive Notes</p>
+                                <p class="text-xs mt-1">Topic-wise</p>
+                            </div>
+                            <div class="bg-white text-green-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>නිබන්ධන බලන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settis Athikala Sir's Videos -->
+                    <div class="card-hover bg-gradient-to-br from-red-500 to-red-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openPhysicsResource('videos')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-play-circle text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ</h3>
+                            <p class="text-red-100 mb-4">Settis Athikala Sir's Videos</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Video Lessons</p>
+                                <p class="text-xs mt-1">Chapter-wise</p>
+                            </div>
+                            <div class="bg-white text-red-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>වීඩියෝ බලන්න
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Physics Features -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mt-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">භෞතික විද්‍යාව සම්පත්</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-calculator text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">සම්පූර්ණ අධ්‍යාපන ක්‍රම</h4>
+                            <p class="text-gray-600">රජයේ පොත්, ගුරු නිබන්ධන සහ වීඩියෝ පාඩම්</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-wave-square text-green-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">ප්‍රායෝගික අධ්‍යයනය</h4>
+                            <p class="text-gray-600">යාන්ත්‍රික විද්‍යාව, තරංග සහ ශක්ති</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-graduation-cap text-red-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">විශේෂඥ මාර්ගෝපදේශනය</h4>
+                            <p class="text-gray-600">පළපුරුදු ගුරුවරුන්ගේ නිබන්ධන සහ වීඩියෝ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chemistry Section -->
+        <section id="chemistrySection" class="py-16 hidden">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <button onclick="goBackToMain()" class="mb-6 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-flask text-green-600 text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">රසායන විද්‍යාව - Chemistry</h2>
+                    <p class="text-lg text-gray-600">උසස් පෙළ තාක්ෂණවේදයක් සඳහා විද්‍යාව - රසායන විද්‍යාව</p>
+                </div>
+
+                <!-- Chemistry Resources Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Government Books -->
+                    <div class="card-hover bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openChemistryResource('books')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-book text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">රජයේ පොත්</h3>
+                            <p class="text-blue-100 mb-4">Government Books</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Official Textbooks</p>
+                                <p class="text-xs mt-1">PDF Downloads</p>
+                            </div>
+                            <div class="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>පොත් බලන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Athugala Sir's Notes -->
+                    <div class="card-hover bg-gradient-to-br from-green-500 to-green-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openChemistryResource('notes')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-file-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">ඇතුගල සර්ගේ නිබන්ධන</h3>
+                            <p class="text-green-100 mb-4">Athugala Sir's Notes</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Comprehensive Notes</p>
+                                <p class="text-xs mt-1">Topic-wise</p>
+                            </div>
+                            <div class="bg-white text-green-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>නිබන්ධන බලන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settis Athikala Sir's Videos -->
+                    <div class="card-hover bg-gradient-to-br from-red-500 to-red-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openChemistryResource('videos')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-play-circle text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ</h3>
+                            <p class="text-red-100 mb-4">Settis Athikala Sir's Videos</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Video Lessons</p>
+                                <p class="text-xs mt-1">Chapter-wise</p>
+                            </div>
+                            <div class="bg-white text-red-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>වීඩියෝ බලන්න
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chemistry Features -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mt-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">රසායන විද්‍යාව සම්පත්</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-atom text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">සම්පූර්ණ අධ්‍යාපන ක්‍රම</h4>
+                            <p class="text-gray-600">රජයේ පොත්, ගුරු නිබන්ධන සහ වීඩියෝ පාඩම්</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-vial text-green-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">ප්‍රායෝගික අධ්‍යයනය</h4>
+                            <p class="text-gray-600">කාබනික, අකාබනික සහ භෞතික රසායන විද්‍යාව</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-graduation-cap text-red-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">විශේෂඥ මාර්ගෝපදේශනය</h4>
+                            <p class="text-gray-600">පළපුරුදු ගුරුවරුන්ගේ නිබන්ධන සහ වීඩියෝ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mathematics Section -->
+        <section id="mathematicsSection" class="py-16 hidden">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <button onclick="goBackToMain()" class="mb-6 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <div class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-calculator text-indigo-600 text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">ගණිතය - Mathematics</h2>
+                    <p class="text-lg text-gray-600">උසස් පෙළ තාක්ෂණවේදයක් සඳහා විද්‍යාව - ගණිතය</p>
+                </div>
+
+                <!-- Mathematics Resources Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Government Books -->
+                    <div class="card-hover bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openMathematicsResource('books')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-book text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">රජයේ පොත්</h3>
+                            <p class="text-blue-100 mb-4">Government Books</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Official Textbooks</p>
+                                <p class="text-xs mt-1">PDF Downloads</p>
+                            </div>
+                            <div class="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>පොත් බලන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Athugala Sir's Notes -->
+                    <div class="card-hover bg-gradient-to-br from-green-500 to-green-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openMathematicsResource('notes')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-file-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">ඇතුගල සර්ගේ නිබන්ධන</h3>
+                            <p class="text-green-100 mb-4">Athugala Sir's Notes</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Comprehensive Notes</p>
+                                <p class="text-xs mt-1">Topic-wise</p>
+                            </div>
+                            <div class="bg-white text-green-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>නිබන්ධන බලන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settis Athikala Sir's Videos -->
+                    <div class="card-hover bg-gradient-to-br from-red-500 to-red-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openMathematicsResource('videos')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-play-circle text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ</h3>
+                            <p class="text-red-100 mb-4">Settis Athikala Sir's Videos</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Video Lessons</p>
+                                <p class="text-xs mt-1">Chapter-wise</p>
+                            </div>
+                            <div class="bg-white text-red-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>වීඩියෝ බලන්න
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mathematics Features -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mt-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">ගණිතය සම්පත්</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-square-root-alt text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">සම්පූර්ණ අධ්‍යාපන ක්‍රම</h4>
+                            <p class="text-gray-600">රජයේ පොත්, ගුරු නිබන්ධන සහ වීඩියෝ පාඩම්</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">ප්‍රායෝගික අධ්‍යයනය</h4>
+                            <p class="text-gray-600">වීජ ගණිතය, කලනය සහ සංඛ්‍යාන විද්‍යාව</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-graduation-cap text-red-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">විශේෂඥ මාර්ගෝපදේශනය</h4>
+                            <p class="text-gray-600">පළපුරුදු ගුරුවරුන්ගේ නිබන්ධන සහ වීඩියෝ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ICT Section -->
+        <section id="ictSection" class="py-16 hidden">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <button onclick="goBackToMain()" class="mb-6 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-laptop-code text-purple-600 text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">ICT - Information Technology</h2>
+                    <p class="text-lg text-gray-600">උසස් පෙළ තාක්ෂණවේදයක් සඳහා විද්‍යාව - ICT</p>
+                </div>
+
+                <!-- ICT Resources Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Government Books -->
+                    <div class="card-hover bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openICTResource('books')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-book text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">රජයේ පොත්</h3>
+                            <p class="text-blue-100 mb-4">Government Books</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Official Textbooks</p>
+                                <p class="text-xs mt-1">PDF Downloads</p>
+                            </div>
+                            <div class="bg-white text-blue-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>පොත් බලන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Athugala Sir's Notes -->
+                    <div class="card-hover bg-gradient-to-br from-green-500 to-green-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openICTResource('notes')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-file-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">ඇතුගල සර්ගේ නිබන්ධන</h3>
+                            <p class="text-green-100 mb-4">Athugala Sir's Notes</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Comprehensive Notes</p>
+                                <p class="text-xs mt-1">Topic-wise</p>
+                            </div>
+                            <div class="bg-white text-green-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>නිබන්ධන බලන්න
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settis Athikala Sir's Videos -->
+                    <div class="card-hover bg-gradient-to-br from-red-500 to-red-700 text-white rounded-xl shadow-lg p-6 cursor-pointer" onclick="openICTResource('videos')">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-play-circle text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ</h3>
+                            <p class="text-red-100 mb-4">Settis Athikala Sir's Videos</p>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-4">
+                                <p class="text-sm">Video Lessons</p>
+                                <p class="text-xs mt-1">Chapter-wise</p>
+                            </div>
+                            <div class="bg-white text-red-600 px-4 py-2 rounded-lg font-bold text-sm">
+                                <i class="fas fa-arrow-right mr-2"></i>වීඩියෝ බලන්න
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ICT Features -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mt-12">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">ICT සම්පත්</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-code text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">සම්පූර්ණ අධ්‍යාපන ක්‍රම</h4>
+                            <p class="text-gray-600">රජයේ පොත්, ගුරු නිබන්ධන සහ වීඩියෝ පාඩම්</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-network-wired text-green-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">ප්‍රායෝගික අධ්‍යයනය</h4>
+                            <p class="text-gray-600">ක්‍රමලේඛනය, ජාල සහ දත්ත ගබඩා කිරීම</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-graduation-cap text-red-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">විශේෂඥ මාර්ගෝපදේශනය</h4>
+                            <p class="text-gray-600">පළපුරුදු ගුරුවරුන්ගේ නිබන්ධන සහ වීඩියෝ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biology Resources Detail Section -->
+        <section id="biologyResourceDetail" class="py-16 bg-white hidden">
+            <div class="container mx-auto px-4">
+                <div class="mb-8">
+                    <button onclick="goBackToBiology()" class="mb-4 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <h2 id="biologyResourceTitle" class="text-3xl font-bold text-gray-800 mb-4"></h2>
+                </div>
+
+                <!-- Resource Content -->
+                <div id="biologyResourceContent">
+                    <!-- Content will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Physics Resources Detail Section -->
+        <section id="physicsResourceDetail" class="py-16 bg-white hidden">
+            <div class="container mx-auto px-4">
+                <div class="mb-8">
+                    <button onclick="goBackToPhysics()" class="mb-4 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <h2 id="physicsResourceTitle" class="text-3xl font-bold text-gray-800 mb-4"></h2>
+                </div>
+
+                <!-- Resource Content -->
+                <div id="physicsResourceContent">
+                    <!-- Content will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Chemistry Resources Detail Section -->
+        <section id="chemistryResourceDetail" class="py-16 bg-white hidden">
+            <div class="container mx-auto px-4">
+                <div class="mb-8">
+                    <button onclick="goBackToChemistry()" class="mb-4 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <h2 id="chemistryResourceTitle" class="text-3xl font-bold text-gray-800 mb-4"></h2>
+                </div>
+
+                <!-- Resource Content -->
+                <div id="chemistryResourceContent">
+                    <!-- Content will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Mathematics Resources Detail Section -->
+        <section id="mathematicsResourceDetail" class="py-16 bg-white hidden">
+            <div class="container mx-auto px-4">
+                <div class="mb-8">
+                    <button onclick="goBackToMathematics()" class="mb-4 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <h2 id="mathematicsResourceTitle" class="text-3xl font-bold text-gray-800 mb-4"></h2>
+                </div>
+
+                <!-- Resource Content -->
+                <div id="mathematicsResourceContent">
+                    <!-- Content will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ICT Resources Detail Section -->
+        <section id="ictResourceDetail" class="py-16 bg-white hidden">
+            <div class="container mx-auto px-4">
+                <div class="mb-8">
+                    <button onclick="goBackToICT()" class="mb-4 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <h2 id="ictResourceTitle" class="text-3xl font-bold text-gray-800 mb-4"></h2>
+                </div>
+
+                <!-- Resource Content -->
+                <div id="ictResourceContent">
+                    <!-- Content will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Paper Downloads Section -->
+        <section id="paperDownloads" class="py-16 bg-white hidden">
+            <div class="container mx-auto px-4">
+                <div class="mb-8">
+                    <button onclick="goBackToPapers()" class="mb-4 bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                        <i class="fas fa-arrow-left mr-2"></i>ආපසු
+                    </button>
+                    <h2 id="categoryTitle" class="text-3xl font-bold text-gray-800 mb-4"></h2>
+                </div>
+
+                <!-- Year and Term Filters -->
+                <div class="bg-gray-50 rounded-lg p-6 mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">අවුරුද්ද</label>
+                            <select id="yearSelect" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                                <option value="all">සියලුම අවුරුදු</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                            </select>
+                        </div>
+                        <div id="termFilter" class="hidden">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">වාරය</label>
+                            <select id="termSelect" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                                <option value="all">සියලුම වාර</option>
+                                <option value="1">පළමු වාරය</option>
+                                <option value="2">දෙවන වාරය</option>
+                                <option value="3">තුන්වන වාරය</option>
+                            </select>
+                        </div>
+                        <div class="flex items-end">
+                            <button onclick="filterPapers()" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                                <i class="fas fa-filter mr-2"></i>Filter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Papers Grid -->
+                <div id="papersGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Papers will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Download Modal -->
+    <div id="downloadModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="text-center mb-6">
+                <i class="fas fa-download text-4xl text-blue-600 mb-4"></i>
+                <h2 id="downloadTitle" class="text-2xl font-bold text-gray-800 mb-2"></h2>
+                <p class="text-gray-600">ප්‍රශ්න පත්‍රය බාගත කිරීමට සූදානම්</p>
+            </div>
+            
+            <div id="downloadContent" class="space-y-4">
+                <!-- Content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">ප්‍රවේශ වන්න</h2>
+                <p class="text-gray-600">ඔබේ ගිණුමට ප්‍රවේශ වන්න</p>
+            </div>
+            
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">පරිශීලක නාමය</label>
+                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">මුරපදය</label>
+                    <input type="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                </div>
+                <button type="button" onclick="handleLogin()" class="w-full sft-gradient text-white py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                    ප්‍රවේශ වන්න
+                </button>
+            </form>
+            
+            <div class="mt-6 text-center">
+                <button onclick="closeLogin()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times mr-2"></i>වසන්න
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // SFT Papers Database
+        const sftPapersData = {
+            ministry: [
+                // 2025
+                { id: 1, year: '2025', title: 'SFT අමාත්‍යාංශ ප්‍රශ්න පත්‍රය', questionSize: '4.2 MB', answerSize: '2.8 MB', questionAvailable: true, answerAvailable: true },
+                // 2024
+                { id: 2, year: '2024', title: 'SFT අමාත්‍යාංශ ප්‍රශ්න පත්‍රය', questionSize: '4.0 MB', answerSize: '2.6 MB', questionAvailable: true, answerAvailable: true },
+                // 2023
+                { id: 3, year: '2023', title: 'SFT අමාත්‍යාංශ ප්‍රශ්න පත්‍රය', questionSize: '3.8 MB', answerSize: '2.4 MB', questionAvailable: true, answerAvailable: true },
+                // 2022
+                { id: 4, year: '2022', title: 'SFT අමාත්‍යාංශ ප්‍රශ්න පත්‍රය', questionSize: '3.6 MB', answerSize: '2.2 MB', questionAvailable: true, answerAvailable: true },
+                // 2021
+                { id: 5, year: '2021', title: 'SFT අමාත්‍යාංශ ප්‍රශ්න පත්‍රය', questionSize: '3.4 MB', answerSize: '2.0 MB', questionAvailable: true, answerAvailable: false },
+                // 2020
+                { id: 6, year: '2020', title: 'SFT අමාත්‍යාංශ ප්‍රශ්න පත්‍රය', questionSize: '3.2 MB', answerSize: '1.8 MB', questionAvailable: true, answerAvailable: true },
+                // 2019
+                { id: 7, year: '2019', title: 'SFT අමාත්‍යාංශ ප්‍රශ්න පත්‍රය', questionSize: '3.0 MB', answerSize: '1.6 MB', questionAvailable: true, answerAvailable: true },
+                // 2018
+                { id: 8, year: '2018', title: 'SFT අමාත්‍යාංශ ප්‍රශ්න පත්‍රය', questionSize: '2.8 MB', answerSize: '1.4 MB', questionAvailable: true, answerAvailable: false },
+                // 2017
+                { id: 9, year: '2017', title: 'SFT අමාත්‍යාංශ ප්‍රශ්න පත්‍රය', questionSize: '2.6 MB', answerSize: '1.2 MB', questionAvailable: true, answerAvailable: true }
+            ],
+            provincial: [
+                // 2025 - 3 Terms
+                { id: 10, year: '2025', term: 1, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - පළමු වාරය', questionSize: '2.8 MB', answerSize: '1.5 MB', questionAvailable: true, answerAvailable: true },
+                { id: 11, year: '2025', term: 2, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - දෙවන වාරය', questionSize: '2.9 MB', answerSize: '1.6 MB', questionAvailable: true, answerAvailable: true },
+                { id: 12, year: '2025', term: 3, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - තුන්වන වාරය', questionSize: '3.0 MB', answerSize: '1.7 MB', questionAvailable: true, answerAvailable: true },
+                // 2024 - 3 Terms
+                { id: 13, year: '2024', term: 1, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - පළමු වාරය', questionSize: '2.7 MB', answerSize: '1.4 MB', questionAvailable: true, answerAvailable: true },
+                { id: 14, year: '2024', term: 2, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - දෙවන වාරය', questionSize: '2.8 MB', answerSize: '1.5 MB', questionAvailable: true, answerAvailable: true },
+                { id: 15, year: '2024', term: 3, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - තුන්වන වාරය', questionSize: '2.9 MB', answerSize: '1.6 MB', questionAvailable: true, answerAvailable: false },
+                // 2023 - 3 Terms
+                { id: 16, year: '2023', term: 1, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - පළමු වාරය', questionSize: '2.6 MB', answerSize: '1.3 MB', questionAvailable: true, answerAvailable: true },
+                { id: 17, year: '2023', term: 2, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - දෙවන වාරය', questionSize: '2.7 MB', answerSize: '1.4 MB', questionAvailable: true, answerAvailable: true },
+                { id: 18, year: '2023', term: 3, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - තුන්වන වාරය', questionSize: '2.8 MB', answerSize: '1.5 MB', questionAvailable: true, answerAvailable: true },
+                // Continue pattern for 2022, 2021, 2020, 2019, 2018, 2017...
+                { id: 19, year: '2022', term: 1, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - පළමු වාරය', questionSize: '2.5 MB', answerSize: '1.2 MB', questionAvailable: true, answerAvailable: true },
+                { id: 20, year: '2022', term: 2, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - දෙවන වාරය', questionSize: '2.6 MB', answerSize: '1.3 MB', questionAvailable: true, answerAvailable: false },
+                { id: 21, year: '2022', term: 3, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - තුන්වන වාරය', questionSize: '2.7 MB', answerSize: '1.4 MB', questionAvailable: true, answerAvailable: true },
+                // Add more years following the same pattern...
+                { id: 22, year: '2021', term: 1, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - පළමු වාරය', questionSize: '2.4 MB', answerSize: '1.1 MB', questionAvailable: true, answerAvailable: true },
+                { id: 23, year: '2021', term: 2, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - දෙවන වාරය', questionSize: '2.5 MB', answerSize: '1.2 MB', questionAvailable: true, answerAvailable: true },
+                { id: 24, year: '2021', term: 3, title: 'SFT පළාත් ප්‍රශ්න පත්‍රය - තුන්වන වාරය', questionSize: '2.6 MB', answerSize: '1.3 MB', questionAvailable: true, answerAvailable: false }
+            ],
+            regional: [
+                // 2025 - 3 Terms
+                { id: 25, year: '2025', term: 1, title: 'SFT කලාප ප්‍රශ්න පත්‍රය - පළමු වාරය', questionSize: '2.2 MB', answerSize: '1.0 MB', questionAvailable: true, answerAvailable: true },
+                { id: 26, year: '2025', term: 2, title: 'SFT කලාප ප්‍රශ්න පත්‍රය - දෙවන වාරය', questionSize: '2.3 MB', answerSize: '1.1 MB', questionAvailable: true, answerAvailable: true },
+                { id: 27, year: '2025', term: 3, title: 'SFT කලාප ප්‍රශ්න පත්‍රය - තුන්වන වාරය', questionSize: '2.4 MB', answerSize: '1.2 MB', questionAvailable: true, answerAvailable: true },
+                // 2024 - 3 Terms
+                { id: 28, year: '2024', term: 1, title: 'SFT කලාප ප්‍රශ්න පත්‍රය - පළමු වාරය', questionSize: '2.1 MB', answerSize: '0.9 MB', questionAvailable: true, answerAvailable: true },
+                { id: 29, year: '2024', term: 2, title: 'SFT කලාප ප්‍රශ්න පත්‍රය - දෙවන වාරය', questionSize: '2.2 MB', answerSize: '1.0 MB', questionAvailable: true, answerAvailable: false },
+                { id: 30, year: '2024', term: 3, title: 'SFT කලාප ප්‍රශ්න පත්‍රය - තුන්වන වාරය', questionSize: '2.3 MB', answerSize: '1.1 MB', questionAvailable: true, answerAvailable: true },
+                // Continue pattern for remaining years...
+                { id: 31, year: '2023', term: 1, title: 'SFT කලාප ප්‍රශ්න පත්‍රය - පළමු වාරය', questionSize: '2.0 MB', answerSize: '0.8 MB', questionAvailable: true, answerAvailable: true },
+                { id: 32, year: '2023', term: 2, title: 'SFT කලාප ප්‍රශ්න පත්‍රය - දෙවන වාරය', questionSize: '2.1 MB', answerSize: '0.9 MB', questionAvailable: true, answerAvailable: true },
+                { id: 33, year: '2023', term: 3, title: 'SFT කලාප ප්‍රශ්න පත්‍රය - තුන්වන වාරය', questionSize: '2.2 MB', answerSize: '1.0 MB', questionAvailable: true, answerAvailable: false }
+            ]
+        };
+
+        // Model Papers Data (Question papers only)
+        const modelPapersData = [
+            { id: 100, title: 'SFT Model Paper - Set 1', questionSize: '3.5 MB', questionAvailable: true, isModel: true },
+            { id: 101, title: 'SFT Model Paper - Set 2', questionSize: '3.7 MB', questionAvailable: true, isModel: true },
+            { id: 102, title: 'SFT Model Paper - Set 3', questionSize: '3.6 MB', questionAvailable: true, isModel: true },
+            { id: 103, title: 'SFT Model Paper - Set 4', questionSize: '3.8 MB', questionAvailable: true, isModel: true },
+            { id: 104, title: 'SFT Model Paper - Set 5', questionSize: '3.4 MB', questionAvailable: true, isModel: true },
+            { id: 105, title: 'SFT Model Paper - Set 6', questionSize: '3.3 MB', questionAvailable: true, isModel: true },
+            { id: 106, title: 'SFT Model Paper - Set 7', questionSize: '3.9 MB', questionAvailable: true, isModel: true },
+            { id: 107, title: 'SFT Model Paper - Set 8', questionSize: '3.2 MB', questionAvailable: true, isModel: true },
+            { id: 108, title: 'SFT Model Paper - Set 9', questionSize: '3.6 MB', questionAvailable: true, isModel: true },
+            { id: 109, title: 'SFT Model Paper - Set 10', questionSize: '3.8 MB', questionAvailable: true, isModel: true }
+        ];
+
+        let currentCategory = '';
+        let currentPapers = [];
+
+        // Biology Resources Data
+        const biologyResourcesData = {
+            books: [
+                { id: 1, title: 'ජීව විද්‍යාව - 12 ශ්‍රේණිය', type: 'රජයේ පොත්', size: '15.2 MB', chapters: 12, available: true },
+                { id: 2, title: 'ජීව විද්‍යාව - 13 ශ්‍රේණිය', type: 'රජයේ පොත්', size: '18.5 MB', chapters: 14, available: true },
+                { id: 3, title: 'ජීව විද්‍යාව ප්‍රායෝගික අත්පොත', type: 'රජයේ පොත්', size: '8.3 MB', chapters: 8, available: true },
+                { id: 4, title: 'ජීව විද්‍යාව - ගුරු මාර්ගෝපදේශය', type: 'රජයේ පොත්', size: '12.1 MB', chapters: 10, available: false }
+            ],
+            notes: [
+                { id: 5, title: 'සෛල ජීව විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '5.2 MB', topics: 8, available: true },
+                { id: 6, title: 'ජාන විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '6.8 MB', topics: 12, available: true },
+                { id: 7, title: 'පරිසර විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '4.5 MB', topics: 6, available: true },
+                { id: 8, title: 'ශරීර විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '7.3 MB', topics: 10, available: true },
+                { id: 9, title: 'ක්ෂුද්‍ර ජීව විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '3.9 MB', topics: 5, available: false },
+                { id: 10, title: 'ජීව රසායන විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '8.1 MB', topics: 14, available: true }
+            ],
+            videos: [
+                { id: 11, title: 'සෛල ව්‍යුහය සහ ක්‍රියාකාරිත්වය', type: 'වීඩියෝ', duration: '45 min', views: '12.5K', available: true, url: 'https://youtube.com/watch?v=demo1' },
+                { id: 12, title: 'DNA සහ RNA ව්‍යුහය', type: 'වීඩියෝ', duration: '38 min', views: '9.8K', available: true, url: 'https://youtube.com/watch?v=demo2' },
+                { id: 13, title: 'ප්‍රතිශක්තිකරණ පද්ධතිය', type: 'වීඩියෝ', duration: '52 min', views: '15.2K', available: true, url: 'https://youtube.com/watch?v=demo3' },
+                { id: 14, title: 'ප්‍රභාසංශ්ලේෂණය', type: 'වීඩියෝ', duration: '41 min', views: '11.3K', available: true, url: 'https://youtube.com/watch?v=demo4' },
+                { id: 15, title: 'ශ්වසන ක්‍රියාවලිය', type: 'වීඩියෝ', duration: '36 min', views: '8.7K', available: true, url: 'https://youtube.com/watch?v=demo5' },
+                { id: 16, title: 'ජාන ප්‍රකාශනය', type: 'වීඩියෝ', duration: '48 min', views: '13.9K', available: false, url: '' },
+                { id: 17, title: 'පරිණාමය සහ ප්‍රභේදනය', type: 'වීඩියෝ', duration: '55 min', views: '10.1K', available: true, url: 'https://youtube.com/watch?v=demo6' },
+                { id: 18, title: 'පරිසර පද්ධති', type: 'වීඩියෝ', duration: '43 min', views: '14.6K', available: true, url: 'https://youtube.com/watch?v=demo7' }
+            ]
+        };
+
+        // Physics Resources Data
+        const physicsResourcesData = {
+            books: [
+                { id: 101, title: 'භෞතික විද්‍යාව - 12 ශ්‍රේණිය', type: 'රජයේ පොත්', size: '16.8 MB', chapters: 14, available: true },
+                { id: 102, title: 'භෞතික විද්‍යාව - 13 ශ්‍රේණිය', type: 'රජයේ පොත්', size: '19.3 MB', chapters: 16, available: true },
+                { id: 103, title: 'භෞතික විද්‍යාව ප්‍රායෝගික අත්පොත', type: 'රජයේ පොත්', size: '9.1 MB', chapters: 10, available: true },
+                { id: 104, title: 'භෞතික විද්‍යාව - ගුරු මාර්ගෝපදේශය', type: 'රජයේ පොත්', size: '13.7 MB', chapters: 12, available: false }
+            ],
+            notes: [
+                { id: 105, title: 'යාන්ත්‍රික විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '6.4 MB', topics: 10, available: true },
+                { id: 106, title: 'තරංග සහ ශබ්දය - ඇතුගල සර්', type: 'නිබන්ධන', size: '5.8 MB', topics: 8, available: true },
+                { id: 107, title: 'විදුලිය සහ චුම්භකත්වය - ඇතුගල සර්', type: 'නිබන්ධන', size: '7.2 MB', topics: 12, available: true },
+                { id: 108, title: 'ප්‍රකාශ විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '4.9 MB', topics: 7, available: true },
+                { id: 109, title: 'නූතන භෞතික විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '8.6 MB', topics: 15, available: false },
+                { id: 110, title: 'තාප ගති විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '5.3 MB', topics: 9, available: true }
+            ],
+            videos: [
+                { id: 111, title: 'නිව්ටන්ගේ නියම', type: 'වීඩියෝ', duration: '42 min', views: '18.2K', available: true, url: 'https://youtube.com/watch?v=physics1' },
+                { id: 112, title: 'විදුලි ක්ෂේත්‍ර සහ විභවය', type: 'වීඩියෝ', duration: '51 min', views: '14.7K', available: true, url: 'https://youtube.com/watch?v=physics2' },
+                { id: 113, title: 'තරංග ගති විද්‍යාව', type: 'වීඩියෝ', duration: '39 min', views: '16.3K', available: true, url: 'https://youtube.com/watch?v=physics3' },
+                { id: 114, title: 'ප්‍රකාශ වර්ණාවලිය', type: 'වීඩියෝ', duration: '46 min', views: '12.9K', available: true, url: 'https://youtube.com/watch?v=physics4' },
+                { id: 115, title: 'ක්වාන්ටම් භෞතික විද්‍යාව', type: 'වීඩියෝ', duration: '58 min', views: '21.4K', available: false, url: '' },
+                { id: 116, title: 'චුම්භක ක්ෂේත්‍ර', type: 'වීඩියෝ', duration: '44 min', views: '13.8K', available: true, url: 'https://youtube.com/watch?v=physics5' },
+                { id: 117, title: 'ශක්ති සංරක්ෂණය', type: 'වීඩියෝ', duration: '37 min', views: '15.6K', available: true, url: 'https://youtube.com/watch?v=physics6' },
+                { id: 118, title: 'අර්ධ සන්නායක', type: 'වීඩියෝ', duration: '49 min', views: '11.2K', available: true, url: 'https://youtube.com/watch?v=physics7' }
+            ]
+        };
+
+        // Chemistry Resources Data
+        const chemistryResourcesData = {
+            books: [
+                { id: 201, title: 'රසායන විද්‍යාව - 12 ශ්‍රේණිය', type: 'රජයේ පොත්', size: '17.4 MB', chapters: 15, available: true },
+                { id: 202, title: 'රසායන විද්‍යාව - 13 ශ්‍රේණිය', type: 'රජයේ පොත්', size: '20.1 MB', chapters: 18, available: true },
+                { id: 203, title: 'රසායන විද්‍යාව ප්‍රායෝගික අත්පොත', type: 'රජයේ පොත්', size: '10.3 MB', chapters: 12, available: true },
+                { id: 204, title: 'රසායන විද්‍යාව - ගුරු මාර්ගෝපදේශය', type: 'රජයේ පොත්', size: '14.8 MB', chapters: 14, available: false }
+            ],
+            notes: [
+                { id: 205, title: 'කාබනික රසායන විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '7.8 MB', topics: 14, available: true },
+                { id: 206, title: 'අකාබනික රසායන විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '6.9 MB', topics: 11, available: true },
+                { id: 207, title: 'භෞතික රසායන විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '8.2 MB', topics: 16, available: true },
+                { id: 208, title: 'විශ්ලේෂණ රසායන විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '5.7 MB', topics: 9, available: true },
+                { id: 209, title: 'පරිසර රසායන විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '4.6 MB', topics: 7, available: false },
+                { id: 210, title: 'ජීව රසායන විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '6.3 MB', topics: 10, available: true }
+            ],
+            videos: [
+                { id: 211, title: 'පරමාණු ව්‍යුහය සහ ආවර්තිතා', type: 'වීඩියෝ', duration: '48 min', views: '16.8K', available: true, url: 'https://youtube.com/watch?v=chemistry1' },
+                { id: 212, title: 'රසායනික බන්ධන', type: 'වීඩියෝ', duration: '52 min', views: '19.3K', available: true, url: 'https://youtube.com/watch?v=chemistry2' },
+                { id: 213, title: 'අම්ල සහ භස්ම', type: 'වීඩියෝ', duration: '41 min', views: '14.2K', available: true, url: 'https://youtube.com/watch?v=chemistry3' },
+                { id: 214, title: 'කාබනික සංයෝග', type: 'වීඩියෝ', duration: '56 min', views: '17.6K', available: true, url: 'https://youtube.com/watch?v=chemistry4' },
+                { id: 215, title: 'ඔක්සිකරණ සහ අඩුකරණ', type: 'වීඩියෝ', duration: '44 min', views: '13.9K', available: false, url: '' },
+                { id: 216, title: 'ගති විද්‍යාව සහ සමතුලිතතාව', type: 'වීඩියෝ', duration: '49 min', views: '15.4K', available: true, url: 'https://youtube.com/watch?v=chemistry5' },
+                { id: 217, title: 'විද්‍යුත් රසායන විද්‍යාව', type: 'වීඩියෝ', duration: '38 min', views: '12.7K', available: true, url: 'https://youtube.com/watch?v=chemistry6' },
+                { id: 218, title: 'ප්‍රායෝගික රසායන විද්‍යාව', type: 'වීඩියෝ', duration: '53 min', views: '18.1K', available: true, url: 'https://youtube.com/watch?v=chemistry7' }
+            ]
+        };
+
+        // Mathematics Resources Data
+        const mathematicsResourcesData = {
+            books: [
+                { id: 301, title: 'ගණිතය - 12 ශ්‍රේණිය', type: 'රජයේ පොත්', size: '14.6 MB', chapters: 12, available: true },
+                { id: 302, title: 'ගණිතය - 13 ශ්‍රේණිය', type: 'රජයේ පොත්', size: '16.9 MB', chapters: 14, available: true },
+                { id: 303, title: 'ගණිතය ප්‍රායෝගික අත්පොත', type: 'රජයේ පොත්', size: '7.8 MB', chapters: 8, available: true },
+                { id: 304, title: 'ගණිතය - ගුරු මාර්ගෝපදේශය', type: 'රජයේ පොත්', size: '11.4 MB', chapters: 10, available: false }
+            ],
+            notes: [
+                { id: 305, title: 'වීජ ගණිතය - ඇතුගල සර්', type: 'නිබන්ධන', size: '5.9 MB', topics: 12, available: true },
+                { id: 306, title: 'කලනය - ඇතුගල සර්', type: 'නිබන්ධන', size: '7.4 MB', topics: 15, available: true },
+                { id: 307, title: 'ත්‍රිකෝණමිතිය - ඇතුගල සර්', type: 'නිබන්ධන', size: '4.8 MB', topics: 9, available: true },
+                { id: 308, title: 'සංඛ්‍යාන විද්‍යාව - ඇතුගල සර්', type: 'නිබන්ධන', size: '6.2 MB', topics: 11, available: true },
+                { id: 309, title: 'ජ්‍යාමිතිය - ඇතුගල සර්', type: 'නිබන්ධන', size: '5.1 MB', topics: 8, available: false },
+                { id: 310, title: 'සම්භාවිතා - ඇතුගල සර්', type: 'නිබන්ධන', size: '3.7 MB', topics: 6, available: true }
+            ],
+            videos: [
+                { id: 311, title: 'සමීකරණ විසඳීම', type: 'වීඩියෝ', duration: '43 min', views: '22.4K', available: true, url: 'https://youtube.com/watch?v=math1' },
+                { id: 312, title: 'අවකලනය', type: 'වීඩියෝ', duration: '51 min', views: '18.7K', available: true, url: 'https://youtube.com/watch?v=math2' },
+                { id: 313, title: 'අනුකලනය', type: 'වීඩියෝ', duration: '47 min', views: '16.9K', available: true, url: 'https://youtube.com/watch?v=math3' },
+                { id: 314, title: 'ත්‍රිකෝණමිතික අනන්‍යතා', type: 'වීඩියෝ', duration: '39 min', views: '14.3K', available: true, url: 'https://youtube.com/watch?v=math4' },
+                { id: 315, title: 'සංකීර්ණ සංඛ්‍යා', type: 'වීඩියෝ', duration: '54 min', views: '20.1K', available: false, url: '' },
+                { id: 316, title: 'මාට්‍රික්ස', type: 'වීඩියෝ', duration: '46 min', views: '17.8K', available: true, url: 'https://youtube.com/watch?v=math5' },
+                { id: 317, title: 'සම්භාවිතා ගණනය', type: 'වීඩියෝ', duration: '41 min', views: '13.6K', available: true, url: 'https://youtube.com/watch?v=math6' },
+                { id: 318, title: 'සංඛ්‍යාන විද්‍යාව', type: 'වීඩියෝ', duration: '48 min', views: '15.9K', available: true, url: 'https://youtube.com/watch?v=math7' }
+            ]
+        };
+
+        // ICT Resources Data
+        const ictResourcesData = {
+            books: [
+                { id: 401, title: 'ICT - 12 ශ්‍රේණිය', type: 'රජයේ පොත්', size: '13.2 MB', chapters: 10, available: true },
+                { id: 402, title: 'ICT - 13 ශ්‍රේණිය', type: 'රජයේ පොත්', size: '15.7 MB', chapters: 12, available: true },
+                { id: 403, title: 'ICT ප්‍රායෝගික අත්පොත', type: 'රජයේ පොත්', size: '8.9 MB', chapters: 8, available: true },
+                { id: 404, title: 'ICT - ගුරු මාර්ගෝපදේශය', type: 'රජයේ පොත්', size: '10.6 MB', chapters: 9, available: false }
+            ],
+            notes: [
+                { id: 405, title: 'ක්‍රමලේඛනය - ඇතුගල සර්', type: 'නිබන්ධන', size: '6.8 MB', topics: 13, available: true },
+                { id: 406, title: 'දත්ත ගබඩා කිරීම - ඇතුගල සර්', type: 'නිබන්ධන', size: '5.4 MB', topics: 9, available: true },
+                { id: 407, title: 'ජාල සහ අන්තර්ජාලය - ඇතුගල සර්', type: 'නිබන්ධන', size: '7.1 MB', topics: 11, available: true },
+                { id: 408, title: 'වෙබ් සංවර්ධනය - ඇතුගල සර්', type: 'නිබන්ධන', size: '8.3 MB', topics: 15, available: true },
+                { id: 409, title: 'පද්ධති විශ්ලේෂණය - ඇතුගල සර්', type: 'නිබන්ධන', size: '4.9 MB', topics: 7, available: false },
+                { id: 410, title: 'මෘදුකාංග ඉංජිනේරු - ඇතුගල සර්', type: 'නිබන්ධන', size: '6.6 MB', topics: 10, available: true }
+            ],
+            videos: [
+                { id: 411, title: 'Python ක්‍රමලේඛනය', type: 'වීඩියෝ', duration: '62 min', views: '25.3K', available: true, url: 'https://youtube.com/watch?v=ict1' },
+                { id: 412, title: 'HTML සහ CSS', type: 'වීඩියෝ', duration: '55 min', views: '21.8K', available: true, url: 'https://youtube.com/watch?v=ict2' },
+                { id: 413, title: 'JavaScript මූලධර්ම', type: 'වීඩියෝ', duration: '48 min', views: '19.4K', available: true, url: 'https://youtube.com/watch?v=ict3' },
+                { id: 414, title: 'දත්ත සමුදාය සැලසුම', type: 'වීඩියෝ', duration: '44 min', views: '16.7K', available: true, url: 'https://youtube.com/watch?v=ict4' },
+                { id: 415, title: 'ජාල ආරක්ෂාව', type: 'වීඩියෝ', duration: '51 min', views: '18.9K', available: false, url: '' },
+                { id: 416, title: 'පද්ධති සංවර්ධනය', type: 'වීඩියෝ', duration: '57 min', views: '14.2K', available: true, url: 'https://youtube.com/watch?v=ict5' },
+                { id: 417, title: 'ක්ලවුඩ් තාක්ෂණය', type: 'වීඩියෝ', duration: '42 min', views: '12.8K', available: true, url: 'https://youtube.com/watch?v=ict6' },
+                { id: 418, title: 'කෘත්‍රිම බුද්ධිය', type: 'වීඩියෝ', duration: '59 min', views: '23.6K', available: true, url: 'https://youtube.com/watch?v=ict7' }
+            ]
+        };
+
+        // Navigation Functions
+        function goHome() {
+            // Go back to main SFT page
+            document.getElementById('papersSection').classList.add('hidden');
+            document.getElementById('paperDownloads').classList.add('hidden');
+            document.getElementById('mainSFTPage').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය');
+        }
+
+        function goToPapersSection() {
+            // Go directly to papers categories section
+            document.getElementById('mainSFTPage').classList.add('hidden');
+            document.getElementById('papersSection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > ප්‍රශ්න පත්‍ර');
+        }
+
+        function goBackToMain() {
+            // Go back to main SFT page from any section
+            document.getElementById('papersSection').classList.add('hidden');
+            document.getElementById('paperDownloads').classList.add('hidden');
+            document.getElementById('biologySection').classList.add('hidden');
+            document.getElementById('biologyResourceDetail').classList.add('hidden');
+            document.getElementById('physicsSection').classList.add('hidden');
+            document.getElementById('physicsResourceDetail').classList.add('hidden');
+            document.getElementById('chemistrySection').classList.add('hidden');
+            document.getElementById('chemistryResourceDetail').classList.add('hidden');
+            document.getElementById('mathematicsSection').classList.add('hidden');
+            document.getElementById('mathematicsResourceDetail').classList.add('hidden');
+            document.getElementById('ictSection').classList.add('hidden');
+            document.getElementById('ictResourceDetail').classList.add('hidden');
+            document.getElementById('mainSFTPage').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය');
+        }
+
+        function goToChemistrySection() {
+            // Go to chemistry section
+            document.getElementById('mainSFTPage').classList.add('hidden');
+            document.getElementById('chemistrySection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > රසායන විද්‍යාව');
+        }
+
+        function goBackToChemistry() {
+            // Go back to chemistry section from resource detail
+            document.getElementById('chemistryResourceDetail').classList.add('hidden');
+            document.getElementById('chemistrySection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > රසායන විද්‍යාව');
+        }
+
+        function goToMathematicsSection() {
+            // Go to mathematics section
+            document.getElementById('mainSFTPage').classList.add('hidden');
+            document.getElementById('mathematicsSection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > ගණිතය');
+        }
+
+        function goBackToMathematics() {
+            // Go back to mathematics section from resource detail
+            document.getElementById('mathematicsResourceDetail').classList.add('hidden');
+            document.getElementById('mathematicsSection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > ගණිතය');
+        }
+
+        function goToICTSection() {
+            // Go to ICT section
+            document.getElementById('mainSFTPage').classList.add('hidden');
+            document.getElementById('ictSection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > ICT');
+        }
+
+        function goBackToICT() {
+            // Go back to ICT section from resource detail
+            document.getElementById('ictResourceDetail').classList.add('hidden');
+            document.getElementById('ictSection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > ICT');
+        }
+
+        function goToBiologySection() {
+            // Go to biology section
+            document.getElementById('mainSFTPage').classList.add('hidden');
+            document.getElementById('biologySection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > ජීව විද්‍යාව');
+        }
+
+        function goBackToBiology() {
+            // Go back to biology section from resource detail
+            document.getElementById('biologyResourceDetail').classList.add('hidden');
+            document.getElementById('biologySection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > ජීව විද්‍යාව');
+        }
+
+        function goToPhysicsSection() {
+            // Go to physics section
+            document.getElementById('mainSFTPage').classList.add('hidden');
+            document.getElementById('physicsSection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > භෞතික විද්‍යාව');
+        }
+
+        function goBackToPhysics() {
+            // Go back to physics section from resource detail
+            document.getElementById('physicsResourceDetail').classList.add('hidden');
+            document.getElementById('physicsSection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > භෞතික විද්‍යාව');
+        }
+
+        function selectSubject(subject) {
+            if (subject === 'papers') {
+                // Go to papers section
+                goToPapersSection();
+            } else if (subject === 'biology') {
+                // Go to biology section
+                goToBiologySection();
+            } else if (subject === 'physics') {
+                // Go to physics section
+                goToPhysicsSection();
+            } else if (subject === 'chemistry') {
+                // Go to chemistry section
+                goToChemistrySection();
+            } else if (subject === 'mathematics') {
+                // Go to mathematics section
+                goToMathematicsSection();
+            } else if (subject === 'ict') {
+                // Go to ICT section
+                goToICTSection();
+            } else {
+                // For any other subjects
+                alert(`${getSubjectName(subject)} කොටස ඉදිරියේදී එකතු කරනු ලැබේ!`);
+            }
+        }
+
+        function getSubjectName(subject) {
+            const names = {
+                'mathematics': 'ගණිතය',
+                'physics': 'භෞතික විද්‍යාව',
+                'biology': 'ජීව විද්‍යාව',
+                'chemistry': 'රසායන විද්‍යාව', 
+                'ict': 'ICT'
+            };
+            return names[subject] || subject;
+        }
+
+        function updateBreadcrumb(text) {
+            document.getElementById('breadcrumbText').textContent = text;
+        }
+
+        // Paper Category Functions
+        function openPaperCategory(category) {
+            currentCategory = category;
+            currentPapers = sftPapersData[category] || [];
+            
+            document.getElementById('papersSection').classList.add('hidden');
+            document.getElementById('paperDownloads').classList.remove('hidden');
+            
+            // Update title
+            const titles = {
+                'ministry': 'අමාත්‍යාංශ ප්‍රශ්න පත්‍ර',
+                'provincial': 'පළාත් ප්‍රශ්න පත්‍ර',
+                'regional': 'කලාප ප්‍රශ්න පත්‍ර'
+            };
+            document.getElementById('categoryTitle').textContent = titles[category];
+            
+            // Show/hide term filter for provincial and regional
+            if (category === 'provincial' || category === 'regional') {
+                document.getElementById('termFilter').classList.remove('hidden');
+            } else {
+                document.getElementById('termFilter').classList.add('hidden');
+            }
+            
+            updateBreadcrumb(`SFT විෂය > ප්‍රශ්න පත්‍ර > ${titles[category]}`);
+            displayPapers(currentPapers);
+        }
+
+        function goBackToPapers() {
+            // Go back to papers categories section
+            document.getElementById('paperDownloads').classList.add('hidden');
+            document.getElementById('papersSection').classList.remove('hidden');
+            updateBreadcrumb('SFT විෂය > ප්‍රශ්න පත්‍ර');
+            currentCategory = '';
+        }
+
+        // Filter Functions
+        function filterPapers() {
+            let filteredPapers = [...currentPapers];
+            
+            const selectedYear = document.getElementById('yearSelect').value;
+            const selectedTerm = document.getElementById('termSelect').value;
+            
+            if (selectedYear !== 'all') {
+                filteredPapers = filteredPapers.filter(paper => paper.year === selectedYear);
+            }
+            
+            if (selectedTerm !== 'all' && (currentCategory === 'provincial' || currentCategory === 'regional')) {
+                filteredPapers = filteredPapers.filter(paper => paper.term === parseInt(selectedTerm));
+            }
+            
+            displayPapers(filteredPapers);
+        }
+
+        // Display Functions
+        function displayPapers(papers) {
+            const grid = document.getElementById('papersGrid');
+            grid.innerHTML = '';
+            
+            papers.forEach(paper => {
+                const paperCard = createPaperCard(paper);
+                grid.appendChild(paperCard);
+            });
+        }
+
+        function createPaperCard(paper) {
+            const card = document.createElement('div');
+            card.className = 'card-hover bg-white rounded-lg shadow-lg p-6';
+            
+            const termText = paper.term ? ` - ${getTermName(paper.term)}` : '';
+            const isModel = paper.isModel || false;
+            
+            card.innerHTML = `
+                <div class="mb-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                            ${paper.year || 'Model'}
+                        </span>
+                        <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">SFT</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">${paper.title}</h3>
+                </div>
+                
+                <div class="space-y-3 mb-4">
+                    <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                        <div class="flex items-center">
+                            <i class="fas fa-question-circle text-blue-600 mr-2"></i>
+                            <span class="text-sm font-medium">ප්‍රශ්න පත්‍රය</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-xs text-gray-500">${paper.questionSize}</span>
+                            ${paper.questionAvailable ? 
+                                `<button onclick="downloadPaper(${paper.id}, 'question')" class="bg-blue-600 text-white px-3 py-1 rounded text-xs hover:bg-blue-700 transition">
+                                    <i class="fas fa-download mr-1"></i>Download
+                                </button>` :
+                                `<span class="bg-gray-300 text-gray-600 px-3 py-1 rounded text-xs">
+                                    <i class="fas fa-lock mr-1"></i>නොමැත
+                                </span>`
+                            }
+                        </div>
+                    </div>
+                    
+                    ${!isModel ? `
+                    <div class="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                            <span class="text-sm font-medium">උත්තර පත්‍රය</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-xs text-gray-500">${paper.answerSize || 'N/A'}</span>
+                            ${paper.answerAvailable ? 
+                                `<button onclick="downloadPaper(${paper.id}, 'answer')" class="bg-green-600 text-white px-3 py-1 rounded text-xs hover:bg-green-700 transition">
+                                    <i class="fas fa-download mr-1"></i>Download
+                                </button>` :
+                                `<span class="bg-gray-300 text-gray-600 px-3 py-1 rounded text-xs">
+                                    <i class="fas fa-lock mr-1"></i>නොමැත
+                                </span>`
+                            }
+                        </div>
+                    </div>
+                    ` : ''}
+                </div>
+                
+                <div class="text-center">
+                    <button onclick="showPaperDetails(${paper.id})" class="sft-gradient text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition">
+                        <i class="fas fa-info-circle mr-2"></i>විස්තර
+                    </button>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function getTermName(term) {
+            const terms = {
+                1: 'පළමු වාරය',
+                2: 'දෙවන වාරය', 
+                3: 'තුන්වන වාරය'
+            };
+            return terms[term] || `වාරය ${term}`;
+        }
+
+        // Download Functions
+        function downloadPaper(paperId, paperType) {
+            // Find paper in all categories
+            let paper = null;
+            for (const category in sftPapersData) {
+                paper = sftPapersData[category].find(p => p.id === paperId);
+                if (paper) break;
+            }
+            
+            if (!paper) {
+                paper = modelPapersData.find(p => p.id === paperId);
+            }
+            
+            if (paper) {
+                const paperData = paperType === 'question' ? 
+                    { size: paper.questionSize, available: paper.questionAvailable } :
+                    { size: paper.answerSize, available: paper.answerAvailable };
+                
+                const paperName = paperType === 'question' ? 'ප්‍රශ්න පත්‍රය' : 'උත්තර පත්‍රය';
+                
+                if (paperData.available) {
+                    alert(`${paper.title} - ${paperName} බාගත කිරීම ආරම්භ විය! (${paperData.size}) - Demo Mode`);
+                } else {
+                    alert('මෙම පත්‍රය තවම ලබා ගත නොහැක.');
+                }
+            }
+        }
+
+        function showPaperDetails(paperId) {
+            // Find paper in all categories
+            let paper = null;
+            for (const category in sftPapersData) {
+                paper = sftPapersData[category].find(p => p.id === paperId);
+                if (paper) break;
+            }
+            
+            if (!paper) {
+                paper = modelPapersData.find(p => p.id === paperId);
+            }
+            
+            if (paper) {
+                document.getElementById('downloadTitle').textContent = paper.title;
+                
+                const isModel = paper.isModel || false;
+                const content = document.getElementById('downloadContent');
+                content.innerHTML = `
+                    <div class="bg-gray-50 p-4 rounded-lg space-y-3">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="font-semibold text-gray-700">අවුරුද්ද:</p>
+                                <p class="text-gray-600">${paper.year || 'Model'}</p>
+                            </div>
+                            ${paper.term ? `
+                            <div>
+                                <p class="font-semibold text-gray-700">වාරය:</p>
+                                <p class="text-gray-600">${getTermName(paper.term)}</p>
+                            </div>
+                            ` : ''}
+                            <div>
+                                <p class="font-semibold text-gray-700">විෂය:</p>
+                                <p class="text-gray-600">SFT</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-700">කාණ්ඩය:</p>
+                                <p class="text-gray-600">${getCategoryName(currentCategory)}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
+                            <div>
+                                <p class="font-semibold text-blue-800">ප්‍රශ්න පත්‍රය</p>
+                                <p class="text-sm text-blue-600">${paper.questionSize}</p>
+                            </div>
+                            ${paper.questionAvailable ? 
+                                `<button onclick="downloadPaper(${paper.id}, 'question')" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                                    <i class="fas fa-download mr-2"></i>Download
+                                </button>` :
+                                `<span class="bg-gray-300 text-gray-600 px-4 py-2 rounded-lg">
+                                    <i class="fas fa-lock mr-2"></i>නොමැත
+                                </span>`
+                            }
+                        </div>
+                        
+                        ${!isModel ? `
+                        <div class="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                            <div>
+                                <p class="font-semibold text-green-800">උත්තර පත්‍රය</p>
+                                <p class="text-sm text-green-600">${paper.answerSize || 'N/A'}</p>
+                            </div>
+                            ${paper.answerAvailable ? 
+                                `<button onclick="downloadPaper(${paper.id}, 'answer')" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+                                    <i class="fas fa-download mr-2"></i>Download
+                                </button>` :
+                                `<span class="bg-gray-300 text-gray-600 px-4 py-2 rounded-lg">
+                                    <i class="fas fa-lock mr-2"></i>නොමැත
+                                </span>`
+                            }
+                        </div>
+                        ` : ''}
+                    </div>
+                    
+                    <button onclick="closeDownload()" class="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">
+                        වසන්න
+                    </button>
+                `;
+                
+                document.getElementById('downloadModal').classList.remove('hidden');
+            }
+        }
+
+        function getCategoryName(category) {
+            const names = {
+                'ministry': 'අමාත්‍යාංශ',
+                'provincial': 'පළාත්',
+                'regional': 'කලාප',
+                'model': 'මොඩල්'
+            };
+            return names[category] || category;
+        }
+
+        function closeDownload() {
+            document.getElementById('downloadModal').classList.add('hidden');
+        }
+
+        // Login Functions
+        function showLogin() {
+            document.getElementById('loginModal').classList.remove('hidden');
+        }
+
+        function closeLogin() {
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function handleLogin() {
+            alert('ප්‍රවේශය සාර්ථකයි! (Demo Mode)');
+            closeLogin();
+        }
+
+        // Modal Event Listeners
+        document.getElementById('downloadModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeDownload();
+            }
+        });
+
+        document.getElementById('loginModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLogin();
+            }
+        });
+
+        // Biology Resource Functions
+        function openBiologyResource(resourceType) {
+            const resources = biologyResourcesData[resourceType] || [];
+            
+            document.getElementById('biologySection').classList.add('hidden');
+            document.getElementById('biologyResourceDetail').classList.remove('hidden');
+            
+            // Update title
+            const titles = {
+                'books': 'රජයේ පොත්',
+                'notes': 'ඇතුගල සර්ගේ නිබන්ධන',
+                'videos': 'සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ'
+            };
+            document.getElementById('biologyResourceTitle').textContent = titles[resourceType];
+            
+            updateBreadcrumb(`SFT විෂය > ජීව විද්‍යාව > ${titles[resourceType]}`);
+            displayBiologyResources(resources, resourceType);
+        }
+
+        // Physics Resource Functions
+        function openPhysicsResource(resourceType) {
+            const resources = physicsResourcesData[resourceType] || [];
+            
+            document.getElementById('physicsSection').classList.add('hidden');
+            document.getElementById('physicsResourceDetail').classList.remove('hidden');
+            
+            // Update title
+            const titles = {
+                'books': 'රජයේ පොත්',
+                'notes': 'ඇතුගල සර්ගේ නිබන්ධන',
+                'videos': 'සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ'
+            };
+            document.getElementById('physicsResourceTitle').textContent = titles[resourceType];
+            
+            updateBreadcrumb(`SFT විෂය > භෞතික විද්‍යාව > ${titles[resourceType]}`);
+            displayPhysicsResources(resources, resourceType);
+        }
+
+        function displayBiologyResources(resources, resourceType) {
+            const content = document.getElementById('biologyResourceContent');
+            content.innerHTML = '';
+            
+            // Add section description
+            const description = document.createElement('div');
+            description.className = 'bg-emerald-50 rounded-lg p-6 mb-8';
+            description.innerHTML = `
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-emerald-800 mb-2">${getResourceTypeTitle(resourceType)}</h3>
+                    <p class="text-emerald-600">${getResourceTypeDescription(resourceType, 'biology')}</p>
+                </div>
+            `;
+            content.appendChild(description);
+            
+            const grid = document.createElement('div');
+            grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+            
+            resources.forEach(resource => {
+                const resourceCard = createBiologyResourceCard(resource, resourceType);
+                grid.appendChild(resourceCard);
+            });
+            
+            content.appendChild(grid);
+        }
+
+        function displayPhysicsResources(resources, resourceType) {
+            const content = document.getElementById('physicsResourceContent');
+            content.innerHTML = '';
+            
+            // Add section description
+            const description = document.createElement('div');
+            description.className = 'bg-blue-50 rounded-lg p-6 mb-8';
+            description.innerHTML = `
+                <div class="text-center">
+                    <h3 class="text-xl font-bold text-blue-800 mb-2">${getResourceTypeTitle(resourceType)}</h3>
+                    <p class="text-blue-600">${getResourceTypeDescription(resourceType, 'physics')}</p>
+                </div>
+            `;
+            content.appendChild(description);
+            
+            const grid = document.createElement('div');
+            grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+            
+            resources.forEach(resource => {
+                const resourceCard = createPhysicsResourceCard(resource, resourceType);
+                grid.appendChild(resourceCard);
+            });
+            
+            content.appendChild(grid);
+        }
+
+        function createBiologyResourceCard(resource, resourceType) {
+            const card = document.createElement('div');
+            card.className = 'card-hover bg-white rounded-lg shadow-lg p-6 border-l-4 border-emerald-500';
+            
+            let actionButton = '';
+            let extraInfo = '';
+            let topicsSection = '';
+            
+            // Get detailed topics for this resource
+            const detailedTopics = getBiologyResourceTopics(resource.id, resourceType);
+            
+            if (resourceType === 'books') {
+                extraInfo = `
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500">${resource.chapters} පරිච්ඡේද</span>
+                        <span class="text-sm font-semibold text-emerald-600">${resource.size}</span>
+                    </div>
+                `;
+                
+                // Add chapter topics
+                if (detailedTopics && detailedTopics.length > 0) {
+                    topicsSection = `
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-gray-700 mb-2">පරිච්ඡේද:</h4>
+                            <div class="space-y-1 max-h-32 overflow-y-auto">
+                                ${detailedTopics.map(topic => `
+                                    <div class="flex items-center text-xs text-gray-600 bg-gray-50 rounded px-2 py-1">
+                                        <i class="fas fa-book-open text-emerald-500 mr-2"></i>
+                                        <span>${topic}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                actionButton = resource.available ? 
+                    `<button onclick="downloadBiologyResource(${resource.id}, 'book')" class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        <i class="fas fa-download mr-2"></i>PDF බාගන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            } else if (resourceType === 'notes') {
+                extraInfo = `
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500">${resource.topics} මාතෘකා</span>
+                        <span class="text-sm font-semibold text-emerald-600">${resource.size}</span>
+                    </div>
+                `;
+                
+                // Add note topics
+                if (detailedTopics && detailedTopics.length > 0) {
+                    topicsSection = `
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-gray-700 mb-2">මාතෘකා:</h4>
+                            <div class="space-y-1 max-h-32 overflow-y-auto">
+                                ${detailedTopics.map(topic => `
+                                    <div class="flex items-center text-xs text-gray-600 bg-gray-50 rounded px-2 py-1">
+                                        <i class="fas fa-file-alt text-green-500 mr-2"></i>
+                                        <span>${topic}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                actionButton = resource.available ? 
+                    `<button onclick="downloadBiologyResource(${resource.id}, 'note')" class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition">
+                        <i class="fas fa-download mr-2"></i>නිබන්ධන බාගන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            } else if (resourceType === 'videos') {
+                extraInfo = `
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500">${resource.duration}</span>
+                        <span class="text-sm font-semibold text-red-600">${resource.views} views</span>
+                    </div>
+                `;
+                
+                // Add video topics/lessons
+                if (detailedTopics && detailedTopics.length > 0) {
+                    topicsSection = `
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-gray-700 mb-2">පාඩම් අන්තර්ගතය:</h4>
+                            <div class="space-y-1 max-h-32 overflow-y-auto">
+                                ${detailedTopics.map(topic => `
+                                    <div class="flex items-center text-xs text-gray-600 bg-gray-50 rounded px-2 py-1">
+                                        <i class="fas fa-play-circle text-red-500 mr-2"></i>
+                                        <span>${topic}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                actionButton = resource.available ? 
+                    `<button onclick="watchBiologyVideo('${resource.url}')" class="w-full bg-red-600 text-white py-2 rounded-lg font-semibold hover:bg-red-700 transition">
+                        <i class="fas fa-play mr-2"></i>වීඩියෝ නරඹන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            }
+            
+            card.innerHTML = `
+                <div class="mb-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">
+                            ${resource.type}
+                        </span>
+                        ${resource.available ? 
+                            '<span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">ලබා ගත හැක</span>' :
+                            '<span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs">නොමැත</span>'
+                        }
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">${resource.title}</h3>
+                    ${extraInfo}
+                </div>
+                
+                ${topicsSection}
+                
+                <div class="mt-4">
+                    ${actionButton}
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function createPhysicsResourceCard(resource, resourceType) {
+            const card = document.createElement('div');
+            card.className = 'card-hover bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-500';
+            
+            let actionButton = '';
+            let extraInfo = '';
+            let topicsSection = '';
+            
+            // Get detailed topics for this resource
+            const detailedTopics = getPhysicsResourceTopics(resource.id, resourceType);
+            
+            if (resourceType === 'books') {
+                extraInfo = `
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500">${resource.chapters} පරිච්ඡේද</span>
+                        <span class="text-sm font-semibold text-blue-600">${resource.size}</span>
+                    </div>
+                `;
+                
+                // Add chapter topics
+                if (detailedTopics && detailedTopics.length > 0) {
+                    topicsSection = `
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-gray-700 mb-2">පරිච්ඡේද:</h4>
+                            <div class="space-y-1 max-h-32 overflow-y-auto">
+                                ${detailedTopics.map(topic => `
+                                    <div class="flex items-center text-xs text-gray-600 bg-gray-50 rounded px-2 py-1">
+                                        <i class="fas fa-book-open text-blue-500 mr-2"></i>
+                                        <span>${topic}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                actionButton = resource.available ? 
+                    `<button onclick="downloadPhysicsResource(${resource.id}, 'book')" class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        <i class="fas fa-download mr-2"></i>PDF බාගන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            } else if (resourceType === 'notes') {
+                extraInfo = `
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500">${resource.topics} මාතෘකා</span>
+                        <span class="text-sm font-semibold text-blue-600">${resource.size}</span>
+                    </div>
+                `;
+                
+                // Add note topics
+                if (detailedTopics && detailedTopics.length > 0) {
+                    topicsSection = `
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-gray-700 mb-2">මාතෘකා:</h4>
+                            <div class="space-y-1 max-h-32 overflow-y-auto">
+                                ${detailedTopics.map(topic => `
+                                    <div class="flex items-center text-xs text-gray-600 bg-gray-50 rounded px-2 py-1">
+                                        <i class="fas fa-file-alt text-green-500 mr-2"></i>
+                                        <span>${topic}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                actionButton = resource.available ? 
+                    `<button onclick="downloadPhysicsResource(${resource.id}, 'note')" class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition">
+                        <i class="fas fa-download mr-2"></i>නිබන්ධන බාගන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            } else if (resourceType === 'videos') {
+                extraInfo = `
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500">${resource.duration}</span>
+                        <span class="text-sm font-semibold text-red-600">${resource.views} views</span>
+                    </div>
+                `;
+                
+                // Add video topics/lessons
+                if (detailedTopics && detailedTopics.length > 0) {
+                    topicsSection = `
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-gray-700 mb-2">පාඩම් අන්තර්ගතය:</h4>
+                            <div class="space-y-1 max-h-32 overflow-y-auto">
+                                ${detailedTopics.map(topic => `
+                                    <div class="flex items-center text-xs text-gray-600 bg-gray-50 rounded px-2 py-1">
+                                        <i class="fas fa-play-circle text-red-500 mr-2"></i>
+                                        <span>${topic}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                actionButton = resource.available ? 
+                    `<button onclick="watchPhysicsVideo('${resource.url}')" class="w-full bg-red-600 text-white py-2 rounded-lg font-semibold hover:bg-red-700 transition">
+                        <i class="fas fa-play mr-2"></i>වීඩියෝ නරඹන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            }
+            
+            card.innerHTML = `
+                <div class="mb-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                            ${resource.type}
+                        </span>
+                        ${resource.available ? 
+                            '<span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">ලබා ගත හැක</span>' :
+                            '<span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs">නොමැත</span>'
+                        }
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">${resource.title}</h3>
+                    ${extraInfo}
+                </div>
+                
+                ${topicsSection}
+                
+                <div class="mt-4">
+                    ${actionButton}
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function downloadBiologyResource(resourceId, resourceType) {
+            // Find resource in biology data
+            let resource = null;
+            for (const category in biologyResourcesData) {
+                resource = biologyResourcesData[category].find(r => r.id === resourceId);
+                if (resource) break;
+            }
+            
+            if (resource && resource.available) {
+                alert(`${resource.title} බාගත කිරීම ආරම්භ විය! (${resource.size}) - Demo Mode`);
+            } else {
+                alert('මෙම සම්පත තවම ලබා ගත නොහැක.');
+            }
+        }
+
+        function downloadPhysicsResource(resourceId, resourceType) {
+            // Find resource in physics data
+            let resource = null;
+            for (const category in physicsResourcesData) {
+                resource = physicsResourcesData[category].find(r => r.id === resourceId);
+                if (resource) break;
+            }
+            
+            if (resource && resource.available) {
+                alert(`${resource.title} බාගත කිරීම ආරම්භ විය! (${resource.size}) - Demo Mode`);
+            } else {
+                alert('මෙම සම්පත තවම ලබා ගත නොහැක.');
+            }
+        }
+
+        function watchBiologyVideo(videoUrl) {
+            if (videoUrl && videoUrl !== '') {
+                alert(`වීඩියෝව YouTube හි විවෘත කරනු ලැබේ - Demo Mode\nURL: ${videoUrl}`);
+                // In real implementation: window.open(videoUrl, '_blank');
+            } else {
+                alert('මෙම වීඩියෝව තවම ලබා ගත නොහැක.');
+            }
+        }
+
+        function watchPhysicsVideo(videoUrl) {
+            if (videoUrl && videoUrl !== '') {
+                alert(`වීඩියෝව YouTube හි විවෘත කරනු ලැබේ - Demo Mode\nURL: ${videoUrl}`);
+                // In real implementation: window.open(videoUrl, '_blank');
+            } else {
+                alert('මෙම වීඩියෝව තවම ලබා ගත නොහැක.');
+            }
+        }
+
+        // Chemistry Resource Functions
+        function openChemistryResource(resourceType) {
+            const resources = chemistryResourcesData[resourceType] || [];
+            
+            document.getElementById('chemistrySection').classList.add('hidden');
+            document.getElementById('chemistryResourceDetail').classList.remove('hidden');
+            
+            // Update title
+            const titles = {
+                'books': 'රජයේ පොත්',
+                'notes': 'ඇතුගල සර්ගේ නිබන්ධන',
+                'videos': 'සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ'
+            };
+            document.getElementById('chemistryResourceTitle').textContent = titles[resourceType];
+            
+            updateBreadcrumb(`SFT විෂය > රසායන විද්‍යාව > ${titles[resourceType]}`);
+            displayChemistryResources(resources, resourceType);
+        }
+
+        // Mathematics Resource Functions
+        function openMathematicsResource(resourceType) {
+            const resources = mathematicsResourcesData[resourceType] || [];
+            
+            document.getElementById('mathematicsSection').classList.add('hidden');
+            document.getElementById('mathematicsResourceDetail').classList.remove('hidden');
+            
+            // Update title
+            const titles = {
+                'books': 'රජයේ පොත්',
+                'notes': 'ඇතුගල සර්ගේ නිබන්ධන',
+                'videos': 'සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ'
+            };
+            document.getElementById('mathematicsResourceTitle').textContent = titles[resourceType];
+            
+            updateBreadcrumb(`SFT විෂය > ගණිතය > ${titles[resourceType]}`);
+            displayMathematicsResources(resources, resourceType);
+        }
+
+        // ICT Resource Functions
+        function openICTResource(resourceType) {
+            const resources = ictResourcesData[resourceType] || [];
+            
+            document.getElementById('ictSection').classList.add('hidden');
+            document.getElementById('ictResourceDetail').classList.remove('hidden');
+            
+            // Update title
+            const titles = {
+                'books': 'රජයේ පොත්',
+                'notes': 'ඇතුගල සර්ගේ නිබන්ධන',
+                'videos': 'සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ'
+            };
+            document.getElementById('ictResourceTitle').textContent = titles[resourceType];
+            
+            updateBreadcrumb(`SFT විෂය > ICT > ${titles[resourceType]}`);
+            displayICTResources(resources, resourceType);
+        }
+
+        function displayChemistryResources(resources, resourceType) {
+            const content = document.getElementById('chemistryResourceContent');
+            content.innerHTML = '';
+            
+            const grid = document.createElement('div');
+            grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+            
+            resources.forEach(resource => {
+                const resourceCard = createChemistryResourceCard(resource, resourceType);
+                grid.appendChild(resourceCard);
+            });
+            
+            content.appendChild(grid);
+        }
+
+        function displayMathematicsResources(resources, resourceType) {
+            const content = document.getElementById('mathematicsResourceContent');
+            content.innerHTML = '';
+            
+            const grid = document.createElement('div');
+            grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+            
+            resources.forEach(resource => {
+                const resourceCard = createMathematicsResourceCard(resource, resourceType);
+                grid.appendChild(resourceCard);
+            });
+            
+            content.appendChild(grid);
+        }
+
+        function displayICTResources(resources, resourceType) {
+            const content = document.getElementById('ictResourceContent');
+            content.innerHTML = '';
+            
+            const grid = document.createElement('div');
+            grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+            
+            resources.forEach(resource => {
+                const resourceCard = createICTResourceCard(resource, resourceType);
+                grid.appendChild(resourceCard);
+            });
+            
+            content.appendChild(grid);
+        }
+
+        function createChemistryResourceCard(resource, resourceType) {
+            const card = document.createElement('div');
+            card.className = 'card-hover bg-white rounded-lg shadow-lg p-6';
+            
+            let actionButton = '';
+            let extraInfo = '';
+            
+            if (resourceType === 'books') {
+                extraInfo = `<p class="text-sm text-gray-500 mb-2">${resource.chapters} පරිච්ඡේද</p>`;
+                actionButton = resource.available ? 
+                    `<button onclick="downloadChemistryResource(${resource.id}, 'book')" class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        <i class="fas fa-download mr-2"></i>PDF බාගන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            } else if (resourceType === 'notes') {
+                extraInfo = `<p class="text-sm text-gray-500 mb-2">${resource.topics} මාතෘකා</p>`;
+                actionButton = resource.available ? 
+                    `<button onclick="downloadChemistryResource(${resource.id}, 'note')" class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition">
+                        <i class="fas fa-download mr-2"></i>නිබන්ධන බාගන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            } else if (resourceType === 'videos') {
+                extraInfo = `<p class="text-sm text-gray-500 mb-2">${resource.duration} • ${resource.views} views</p>`;
+                actionButton = resource.available ? 
+                    `<button onclick="watchChemistryVideo('${resource.url}')" class="w-full bg-red-600 text-white py-2 rounded-lg font-semibold hover:bg-red-700 transition">
+                        <i class="fas fa-play mr-2"></i>වීඩියෝ නරඹන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            }
+            
+            card.innerHTML = `
+                <div class="mb-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                            ${resource.type}
+                        </span>
+                        ${resource.available ? 
+                            '<span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">ලබා ගත හැක</span>' :
+                            '<span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs">නොමැත</span>'
+                        }
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">${resource.title}</h3>
+                    ${extraInfo}
+                    ${resourceType !== 'videos' ? `<p class="text-sm text-gray-500">${resource.size}</p>` : ''}
+                </div>
+                
+                <div class="mt-4">
+                    ${actionButton}
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function createMathematicsResourceCard(resource, resourceType) {
+            const card = document.createElement('div');
+            card.className = 'card-hover bg-white rounded-lg shadow-lg p-6';
+            
+            let actionButton = '';
+            let extraInfo = '';
+            
+            if (resourceType === 'books') {
+                extraInfo = `<p class="text-sm text-gray-500 mb-2">${resource.chapters} පරිච්ඡේද</p>`;
+                actionButton = resource.available ? 
+                    `<button onclick="downloadMathematicsResource(${resource.id}, 'book')" class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        <i class="fas fa-download mr-2"></i>PDF බාගන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            } else if (resourceType === 'notes') {
+                extraInfo = `<p class="text-sm text-gray-500 mb-2">${resource.topics} මාතෘකා</p>`;
+                actionButton = resource.available ? 
+                    `<button onclick="downloadMathematicsResource(${resource.id}, 'note')" class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition">
+                        <i class="fas fa-download mr-2"></i>නිබන්ධන බාගන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            } else if (resourceType === 'videos') {
+                extraInfo = `<p class="text-sm text-gray-500 mb-2">${resource.duration} • ${resource.views} views</p>`;
+                actionButton = resource.available ? 
+                    `<button onclick="watchMathematicsVideo('${resource.url}')" class="w-full bg-red-600 text-white py-2 rounded-lg font-semibold hover:bg-red-700 transition">
+                        <i class="fas fa-play mr-2"></i>වීඩියෝ නරඹන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            }
+            
+            card.innerHTML = `
+                <div class="mb-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-semibold">
+                            ${resource.type}
+                        </span>
+                        ${resource.available ? 
+                            '<span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">ලබා ගත හැක</span>' :
+                            '<span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs">නොමැත</span>'
+                        }
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">${resource.title}</h3>
+                    ${extraInfo}
+                    ${resourceType !== 'videos' ? `<p class="text-sm text-gray-500">${resource.size}</p>` : ''}
+                </div>
+                
+                <div class="mt-4">
+                    ${actionButton}
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function createICTResourceCard(resource, resourceType) {
+            const card = document.createElement('div');
+            card.className = 'card-hover bg-white rounded-lg shadow-lg p-6';
+            
+            let actionButton = '';
+            let extraInfo = '';
+            
+            if (resourceType === 'books') {
+                extraInfo = `<p class="text-sm text-gray-500 mb-2">${resource.chapters} පරිච්ඡේද</p>`;
+                actionButton = resource.available ? 
+                    `<button onclick="downloadICTResource(${resource.id}, 'book')" class="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                        <i class="fas fa-download mr-2"></i>PDF බාගන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            } else if (resourceType === 'notes') {
+                extraInfo = `<p class="text-sm text-gray-500 mb-2">${resource.topics} මාතෘකා</p>`;
+                actionButton = resource.available ? 
+                    `<button onclick="downloadICTResource(${resource.id}, 'note')" class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition">
+                        <i class="fas fa-download mr-2"></i>නිබන්ධන බාගන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            } else if (resourceType === 'videos') {
+                extraInfo = `<p class="text-sm text-gray-500 mb-2">${resource.duration} • ${resource.views} views</p>`;
+                actionButton = resource.available ? 
+                    `<button onclick="watchICTVideo('${resource.url}')" class="w-full bg-red-600 text-white py-2 rounded-lg font-semibold hover:bg-red-700 transition">
+                        <i class="fas fa-play mr-2"></i>වීඩියෝ නරඹන්න
+                    </button>` :
+                    `<button class="w-full bg-gray-300 text-gray-600 py-2 rounded-lg font-semibold cursor-not-allowed">
+                        <i class="fas fa-lock mr-2"></i>ලබා ගත නොහැක
+                    </button>`;
+            }
+            
+            card.innerHTML = `
+                <div class="mb-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
+                            ${resource.type}
+                        </span>
+                        ${resource.available ? 
+                            '<span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs">ලබා ගත හැක</span>' :
+                            '<span class="bg-red-100 text-red-700 px-2 py-1 rounded text-xs">නොමැත</span>'
+                        }
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">${resource.title}</h3>
+                    ${extraInfo}
+                    ${resourceType !== 'videos' ? `<p class="text-sm text-gray-500">${resource.size}</p>` : ''}
+                </div>
+                
+                <div class="mt-4">
+                    ${actionButton}
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function downloadChemistryResource(resourceId, resourceType) {
+            // Find resource in chemistry data
+            let resource = null;
+            for (const category in chemistryResourcesData) {
+                resource = chemistryResourcesData[category].find(r => r.id === resourceId);
+                if (resource) break;
+            }
+            
+            if (resource && resource.available) {
+                alert(`${resource.title} බාගත කිරීම ආරම්භ විය! (${resource.size}) - Demo Mode`);
+            } else {
+                alert('මෙම සම්පත තවම ලබා ගත නොහැක.');
+            }
+        }
+
+        function downloadMathematicsResource(resourceId, resourceType) {
+            // Find resource in mathematics data
+            let resource = null;
+            for (const category in mathematicsResourcesData) {
+                resource = mathematicsResourcesData[category].find(r => r.id === resourceId);
+                if (resource) break;
+            }
+            
+            if (resource && resource.available) {
+                alert(`${resource.title} බාගත කිරීම ආරම්භ විය! (${resource.size}) - Demo Mode`);
+            } else {
+                alert('මෙම සම්පත තවම ලබා ගත නොහැක.');
+            }
+        }
+
+        function downloadICTResource(resourceId, resourceType) {
+            // Find resource in ICT data
+            let resource = null;
+            for (const category in ictResourcesData) {
+                resource = ictResourcesData[category].find(r => r.id === resourceId);
+                if (resource) break;
+            }
+            
+            if (resource && resource.available) {
+                alert(`${resource.title} බාගත කිරීම ආරම්භ විය! (${resource.size}) - Demo Mode`);
+            } else {
+                alert('මෙම සම්පත තවම ලබා ගත නොහැක.');
+            }
+        }
+
+        function watchChemistryVideo(videoUrl) {
+            if (videoUrl && videoUrl !== '') {
+                alert(`වීඩියෝව YouTube හි විවෘත කරනු ලැබේ - Demo Mode\nURL: ${videoUrl}`);
+                // In real implementation: window.open(videoUrl, '_blank');
+            } else {
+                alert('මෙම වීඩියෝව තවම ලබා ගත නොහැක.');
+            }
+        }
+
+        function watchMathematicsVideo(videoUrl) {
+            if (videoUrl && videoUrl !== '') {
+                alert(`වීඩියෝව YouTube හි විවෘත කරනු ලැබේ - Demo Mode\nURL: ${videoUrl}`);
+                // In real implementation: window.open(videoUrl, '_blank');
+            } else {
+                alert('මෙම වීඩියෝව තවම ලබා ගත නොහැක.');
+            }
+        }
+
+        function watchICTVideo(videoUrl) {
+            if (videoUrl && videoUrl !== '') {
+                alert(`වීඩියෝව YouTube හි විවෘත කරනු ලැබේ - Demo Mode\nURL: ${videoUrl}`);
+                // In real implementation: window.open(videoUrl, '_blank');
+            } else {
+                alert('මෙම වීඩියෝව තවම ලබා ගත නොහැක.');
+            }
+        }
+
+        // Helper functions for resource types
+        function getResourceTypeTitle(resourceType) {
+            const titles = {
+                'books': 'රජයේ පොත්',
+                'notes': 'ඇතුගල සර්ගේ නිබන්ධන',
+                'videos': 'සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ'
+            };
+            return titles[resourceType] || resourceType;
+        }
+
+        function getResourceTypeDescription(resourceType, subject) {
+            const descriptions = {
+                'books': `${getSubjectName(subject)} විෂයට අදාල රජයේ නිල පාඨ්‍ය පොත්`,
+                'notes': `${getSubjectName(subject)} විෂයට අදාල ඇතුගල සර්ගේ සම්පූර්ණ නිබන්ධන`,
+                'videos': `${getSubjectName(subject)} විෂයට අදාල සෙට්ටිස් ඇතිකළ සර්ගේ වීඩියෝ පාඩම්`
+            };
+            return descriptions[resourceType] || '';
+        }
+
+        // Physics Resource Topics Data
+        function getPhysicsResourceTopics(resourceId, resourceType) {
+            const topicsData = {
+                // Books
+                101: ['යාන්ත්‍රික විද්‍යාව', 'තරංග සහ ශබ්දය', 'ප්‍රකාශ විද්‍යාව', 'විදුලිය', 'චුම්භකත්වය', 'තාප ගති විද්‍යාව', 'නූතන භෞතික විද්‍යාව', 'පරමාණු ව්‍යුහය', 'ක්වාන්ටම් භෞතික විද්‍යාව', 'අර්ධ සන්නායක', 'න්‍යුක්ලීය භෞතික විද්‍යාව', 'ජ්‍යොතිර්විද්‍යාව', 'භූ භෞතික විද්‍යාව', 'ප්‍රායෝගික භෞතික විද්‍යාව'],
+                102: ['සාපේක්ෂතාවාදය', 'ක්වාන්ටම් යාන්ත්‍රික විද්‍යාව', 'කණ භෞතික විද්‍යාව', 'න්‍යුක්ලීය ප්‍රතික්‍රියා', 'ප්ලාස්මා භෞතික විද්‍යාව', 'ඝන අවස්ථා භෞතික විද්‍යාව', 'ජ්‍යොතිර්භෞතික විද්‍යාව', 'කොස්මොලොජි', 'නැනෝ තාක්ෂණය', 'ලේසර් තාක්ෂණය', 'සුපර් සන්නායකතාව', 'ක්‍රයෝජනික්ස්', 'ප්ලාස්මා භෞතික විද්‍යාව', 'ජීව භෞතික විද්‍යාව', 'පරිගණක භෞතික විද්‍යාව', 'ගණිතමය භෞතික විද්‍යාව'],
+                103: ['ප්‍රායෝගික 1: සරල ලෝලකය', 'ප්‍රායෝගික 2: ඕම්ගේ නියමය', 'ප්‍රායෝගික 3: ප්‍රතිරෝධකතාව', 'ප්‍රායෝගික 4: ප්‍රකාශ වර්තනය', 'ප්‍රායෝගික 5: ප්‍රකාශ වර්ණාවලිය', 'ප්‍රායෝගික 6: තරංග දිග මැනීම', 'ප්‍රායෝගික 7: චුම්භක ක්ෂේත්‍රය', 'ප්‍රායෝගික 8: විකිරණ නියම', 'ප්‍රායෝගික 9: ප්ලාන්ක් නියතය', 'ප්‍රායෝගික 10: ෆොටෝ ඉලෙක්ට්‍රික් ආචරණය'],
+                
+                // Notes
+                105: ['නිව්ටන්ගේ නියම', 'ගති විද්‍යාව', 'ශක්ති සංරක්ෂණය', 'ගම්‍යතා සංරක්ෂණය', 'කෝණික ගම්‍යතාව', 'සරල හාර්මොනික් ගතිය', 'ගුරුත්වාකර්ෂණය', 'තරල ගති විද්‍යාව', 'ස්ථිතික සමතුලිතතාව', 'කැරකෙන ගතිය'],
+                106: ['තරංග ගති විද්‍යාව', 'ශබ්ද තරංග', 'ඩොප්ලර් ආචරණය', 'අධිස්ථාපනය', 'අන්තර්ක්‍රියා', 'අනුනාදය', 'තරංග සම්ප්‍රේෂණය', 'ස්ථාවර තරංග'],
+                107: ['කූලොම්බ්ගේ නියමය', 'විදුලි ක්ෂේත්‍රය', 'විදුලි විභවය', 'ගවුස්ගේ නියමය', 'ධාරිතාව', 'ඩයිඉලෙක්ට්‍රික්', 'විදුලි ධාරාව', 'ඕම්ගේ නියමය', 'කර්ච්හොෆ්ගේ නියම', 'AC සර්කිට්', 'ට්‍රාන්ස්ෆෝමර්', 'ජනක'],
+                108: ['ප්‍රකාශ ස්වභාවය', 'ප්‍රකාශ වර්තනය', 'ප්‍රකාශ වර්ණාවලිය', 'ඉන්ටර්ෆරන්ස්', 'ඩිෆ්‍රැක්ෂන්', 'ධ්‍රුවීකරණය', 'ලේසර්', 'ෆයිබර් ඔප්ටික්ස්'],
+                109: ['විශේෂ සාপේක්ෂතාවාදය', 'සාමාන්‍ය සාපේක්ෂතාවාදය', 'ක්වාන්ටම් යාන්ත්‍රික විද්‍යාව', 'ප්ලාන්ක්ගේ නියතය', 'ෆොටෝ ඉලෙක්ට්‍රික් ආචරණය', 'කොම්ප්ටන් විසරණය', 'ද බ්‍රොග්ලි තරංග', 'හයිසන්බර්ග් අනිශ්චිතතා', 'ෂ්‍රෝඩිංගර් සමීකරණය', 'පරමාණු ආකෘති', 'න්‍යුක්ලීය ව්‍යුහය', 'විකිරණශීලිත්වය', 'න්‍යුක්ලීය ප්‍රතික්‍රියා', 'කණ භෞතික විද්‍යාව', 'ක්වාර්ක්'],
+                110: ['තාප ගති විද්‍යාවේ පළමු නියමය', 'තාප ගති විද්‍යාවේ දෙවන නියමය', 'එන්ට්‍රොපිය', 'කාර්නොට් එන්ජිම', 'ගෑස් නියම', 'කයිනෙටික් න්‍යාය', 'මැක්ස්වෙල් බෙදාහැරීම', 'ෆේස් සංක්‍රමණ', 'ක්‍රිටිකල් ලක්ෂ්‍ය'],
+                
+                // Videos
+                111: ['නිව්ටන්ගේ පළමු නියමය', 'නිව්ටන්ගේ දෙවන නියමය', 'නිව්ටන්ගේ තුන්වන නියමය', 'ගති සමීකරණ', 'ශක්ති සංරක්ෂණය'],
+                112: ['විදුලි ක්ෂේත්‍ර සංකල්පය', 'විදුලි විභවය', 'ගවුස්ගේ නියමය', 'ධාරිතාව', 'ඩයිඉලෙක්ට්‍රික්'],
+                113: ['තරංග සමීකරණය', 'තරංග වේගය', 'ඩොප්ලර් ආචරණය', 'අධිස්ථාපනය', 'අන්තර්ක්‍රියා'],
+                114: ['ප්‍රකාශ වර්ණාවලිය', 'ප්‍රකාශ විසරණය', 'ප්‍රකාශ ධ්‍රුවීකරණය', 'ඉන්ටර්ෆරන්ස්', 'ඩිෆ්‍රැක්ෂන්'],
+                116: ['චුම්භක ක්ෂේත්‍රය', 'ලොරෙන්ට්ස් බලය', 'ෆැරඩේගේ නියමය', 'ලෙන්ස්ගේ නියමය', 'ප්‍රේරිත EMF'],
+                117: ['යාන්ත්‍රික ශක්තිය', 'විභව ශක්තිය', 'චාලක ශක්තිය', 'ශක්ති සංරක්ෂණය', 'ශක්ති පරිවර්තනය'],
+                118: ['අර්ධ සන්නායක ගුණ', 'p-n සන්ධිය', 'ඩයෝඩ්', 'ට්‍රාන්සිස්ටර්', 'ඉන්ටිග්‍රේටඩ් සර්කිට්']
+            };
+            
+            return topicsData[resourceId] || [];
+        }
+
+        // Biology Resource Topics Data
+        function getBiologyResourceTopics(resourceId, resourceType) {
+            const topicsData = {
+                // Books
+                1: ['සෛල ව්‍යුහය සහ ක්‍රියාකාරිත්වය', 'සෛල බෙදීම', 'ජාන සහ ප්‍රභේදනය', 'DNA සහ RNA', 'ප්‍රතිශක්තිකරණය', 'ශරීර පද්ධති', 'ප්‍රභාසංශ්ලේෂණය', 'ශ්වසනය', 'ජීව රසායන විද්‍යාව', 'පරිණාමය', 'පරිසර විද්‍යාව', 'ක්ෂුද්‍ර ජීව විද්‍යාව'],
+                2: ['අණුක ජීව විද්‍යාව', 'ජාන ඉංජිනේරු විද්‍යාව', 'ජීව තාක්ෂණය', 'නූතන ජාන විද්‍යාව', 'ප්‍රතිශක්තිකරණ පද්ධති', 'ශරීර විද්‍යාව', 'පරිසර සංරක්ෂණය', 'ජෛව විවිධත්වය', 'ක්ෂුද්‍ර ජීව විද්‍යාව', 'ජීව රසායන විද්‍යාව', 'පරිණාම ජීව විද්‍යාව', 'ප්‍රායෝගික ජීව විද්‍යාව', 'ජීව සංඛ්‍යාන විද්‍යාව', 'ජීව භෞතික විද්‍යාව'],
+                3: ['ප්‍රායෝගික 1: අණුවීක්ෂණය', 'ප්‍රායෝගික 2: සෛල නිරීක්ෂණය', 'ප්‍රායෝගික 3: DNA නිස්සාරණය', 'ප්‍රායෝගික 4: එන්සයිම ක්‍රියාකාරිත්වය', 'ප්‍රායෝගික 5: ප්‍රභාසංශ්ලේෂණය', 'ප්‍රායෝගික 6: ශ්වසන අනුපාතය', 'ප්‍රායෝගික 7: ජීව සංඛ්‍යාන', 'ප්‍රායෝගික 8: පරිසර අධ්‍යයනය'],
+                
+                // Notes
+                5: ['සෛල පටල ව්‍යුහය', 'සෛල අවයව', 'සෛල බෙදීම - මයිටෝසිස්', 'සෛල බෙදීම - මයිඕසිස්', 'සෛල ශ්වසනය', 'සෛල සන්නිවේදනය', 'සෛල මරණය', 'ප්‍රතිශක්තිකරණ සෛල'],
+                6: ['DNA ව්‍යුහය', 'RNA වර්ග', 'ජාන ප්‍රකාශනය', 'ප්‍රභේදනය', 'ජාන සිතියම්', 'ජාන ඉංජිනේරු', 'ජාන චිකිත්සාව', 'ජාන නියාමනය', 'ජාන විකෘතිකරණ', 'ජාන පරීක්ෂණ', 'ජාන සංරක්ෂණය', 'ජාන ආචාර ධර්ම'],
+                7: ['පරිසර සාධක', 'ජනගහන ගති විද්‍යාව', 'ප්‍රජා අන්තර්ක්‍රියා', 'ආහාර දාම', 'ශක්ති ප්‍රවාහය', 'කාබන් චක්‍රය', 'පරිසර දූෂණය'],
+                8: ['ශරීර පද්ධති', 'ස්නායු පද්ධතිය', 'අන්තඃස්‍රාවී පද්ධතිය', 'ප්‍රතිශක්තිකරණ පද්ධතිය', 'ප්‍රජනන පද්ධතිය', 'ආහාර ජීර්ණ පද්ධතිය', 'ශ්වසන පද්ධතිය', 'රුධිර සංසරණ පද්ධතිය', 'මුත්‍රා පද්ධතිය', 'සම් පද්ධතිය'],
+                10: ['ප්‍රෝටීන ව්‍යුහය', 'කාබෝහයිඩ්‍රේට්', 'ලිපිඩ්', 'න්‍යුක්ලීක් අම්ල', 'එන්සයිම', 'විටමින්', 'ඛනිජ ලවණ', 'ජල සමතුලිතතාව', 'pH නියාමනය', 'ජීව රසායනික ප්‍රතික්‍රියා', 'ජීව ශක්ති', 'ජීව අණු', 'ජීව රසායනික පරීක්ෂණ', 'ජීව රසායනික ආබාධ'],
+                
+                // Videos
+                11: ['සෛල පටල ව්‍යුහය', 'සෛල අවයව හඳුනාගැනීම', 'සෛල ක්‍රියාකාරිත්වය', 'සෛල බෙදීම ක්‍රියාවලිය', 'සෛල ශ්වසනය'],
+                12: ['DNA ද්විත්ව හෙලික්ස්', 'RNA වර්ග සහ ක්‍රියාකාරිත්වය', 'ප්‍රතිලිපිකරණය', 'පරිවර්තනය', 'ප්‍රභේදනය'],
+                13: ['ප්‍රතිශක්තිකරණ සෛල', 'ප්‍රතිරක්ෂක', 'ප්‍රතිශක්තිකරණ ප්‍රතික්‍රියා', 'ස්වයං ප්‍රතිශක්තිකරණ', 'එන්නත්'],
+                14: ['ප්‍රභාසංශ්ලේෂණ ප්‍රතික්‍රියා', 'ක්ලෝරෝෆිල්', 'ආලෝක ප්‍රතික්‍රියා', 'අඳුරු ප්‍රතික්‍රියා', 'කාල්වින් චක්‍රය'],
+                15: ['ශ්වසන ප්‍රතික්‍රියා', 'ග්ලයිකෝලිසිස්', 'ක්‍රෙබ්ස් චක්‍රය', 'ඉලෙක්ට්‍රෝන ප්‍රවාහන දාමය', 'ATP නිෂ්පාදනය'],
+                17: ['ප්‍රභේදනය සහ ප්‍රභේද', 'ස්වභාවික වරණය', 'අනුවර්තනය', 'ප්‍රභේද ගොඩනැගීම', 'පරිණාම සාක්ෂි'],
+                18: ['පරිසර සාධක', 'ජනගහන ගති විද්‍යාව', 'ප්‍රජා අන්තර්ක්‍රියා', 'ආහාර දාම', 'ශක්ති ප්‍රවාහය']
+            };
+            
+            return topicsData[resourceId] || [];
+        }
+        // Navigation functions
+        function goHome() {
+            // Navigate back to main homepage
+            window.location.href = 'index.html';
+        }
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if coming from specific subject
+            const urlParams = new URLSearchParams(window.location.search);
+            const subject = urlParams.get('subject');
+            
+            if (subject === 'papers') {
+                goToPapersSection();
+            } else if (subject === 'biology') {
+                goToBiologySection();
+            } else if (subject === 'physics') {
+                goToPhysicsSection();
+            } else if (subject === 'chemistry') {
+                goToChemistrySection();
+            } else if (subject === 'mathematics') {
+                goToMathematicsSection();
+            } else if (subject === 'ict') {
+                goToICTSection();
+            }
+            // Default: show main SFT page with 6 cards
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97298820d6aab305',t:'MTc1NTc3MzAzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
